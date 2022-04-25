@@ -20,7 +20,7 @@ $(document).ready( function() {
 
     //Evento click sobre el parrafo
     let parrafo = $('#parrafo-1');
-    parrafo.click( ()=>{
+    parrafo.click( () => {
         console.info("Click sobre el parrafo");
     });
 
