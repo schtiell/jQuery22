@@ -11,13 +11,21 @@ let iniciarEventos = function () {
 
 //jQuery
 $(document).ready( function() {
+
+    //Evento click sobre el boton
     let boton = $('#jquery');
-    boton.click(presionarBoton);
+    boton.click( () =>  {
+        alert("Mensaje mostrado utilizando jQuery");
+    });
+
+    //Evento click sobre el parrafo
+    let parrafo = $('#parrafo-1');
+    parrafo.click( ()=>{
+        console.info("Click sobre el parrafo");
+    });
+
 });
 
-function presionarBoton() {
-    alert("Mensaje mostrado utilizando jQuery");
-}
 
 //Evento DOMContentLoaded – DOM está listo, por lo que el controlador puede buscar nodos DOM, inicializar la interfaz.
 addEventListener('DOMContentLoaded', iniciarEventos, false);
