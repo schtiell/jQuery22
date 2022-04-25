@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/01.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>jQuery: Otra manera de utilizar js!</title>
 </head>
 <body>
     <div class="container">
@@ -19,11 +32,17 @@
 
         <p>Dispongamos el problema trivial de capturar el evento de un control HTML de tipo button, lo desarrollaremos utilizando la metodología tradicional accediendo directamente a las funciones del DOM y luego empleando la librería jQuery:</p>
 
-        <h2>Captura del evento click de un control HTML de tipo button.</h2>
+        <h2>Captura del evento click:
+            <small>Utilizando javascript tradicional y jQuery</small>
+        </h2>
 
-        <a href="./01.de_js_a_jquery_2.html">Metodo tradicional con las funciones del DOM</a>
-        <a href="./01.de_js_a_jquery_3.html">Utilizando la libreria de jQuerys</a>
+        <hr>
+        
+        <button id="js-tradicional" class="btn btn-primary">Mostrar con Js!</button>
+        <button id="jquery" class="btn btn-primary">Mostrar con jQuery!</button>
 
     </div>
+
+    <script src="./js/01.funciones.js" type="text/javascript"></script>
 </body>
 </html>
