@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/07.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Métodos attr() & removeAttr()</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>jQuery:
+            <small>Métodos attr(nombre de propiedad), attr(nombre de propiedad,valor) y removeAttr(nombre de propiedad)</small>
+        </h1>
+        
+        <hr>
+
+        <p>Estos métodos nos permiten agregar propiedades a un elemento HTML y recuperar el valor de una propiedad.</p>
+
+        <p>Para recuperar el valor de una propiedad (si hay muchos elementos que recupera la función $, solo retorna la propiedad del primero):</p>
+
+        <pre>$(elemento).attr(nombre de propiedad)</pre>
+
+        <p>Para fijar el valor de una propiedad (si hay muchos elementos que recupera la función $, se inicializan para todos):</p>
+
+        <pre>$(elemento).attr(nombre de propiedad,valor)</pre>
+
+        <p>Para eliminar una propiedad de un elemento o conjunto de elementos tenemos:</p>
+
+        <pre>$(elemento).removeAttr(nombre de la propiedad)</pre>
+
+        <hr>
+
+        <h2>Ejercicio 1:
+            <small></small>
+        </h2>
+
+        <p>Problema:Definir una tabla sin el atributo border. Al presionar un botón añadirle la propiedad border con el valor 1. Si se presiona otro botón recuperar y mostrar el valor del atributo border y por último si se presiona otro botón eliminar la propiedad border.</p>
+
+        <hr>
+
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Points</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Steve</td>
+                    <td>Jhons</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Magada</td>
+                    <td>St. Claire</td>
+                    <td>94</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <button id="btn-1" class="btn btn-primary">Añadir propiedad border</button>
+        <button id="btn-2" class="btn btn-primary">Recuperar el valor de la propiedad border</button>
+        <button id="btn-3" class="btn btn-primary">Eliminar propiedad border</button>
+
+        <hr>
+
+        <h2>Ejercicio 2:
+            <small></small>
+        </h2>
+
+        <p>Definir un hipervínculo con la propiedad href con cadena vacía. Luego disponer tres botones que permitar fijar distintos hipervínculos para la propiedad href. Además actualizar el texto del hipervínculo.</p>
+
+        <hr>
+
+        <p>
+            <a href="" id="link">Ir al sitio</a>
+        </p>
+
+        <button id="btn-4" class="btn btn-primary">Google</button>
+        <button id="btn-5" class="btn btn-primary">Facebook</button>
+        <button id="btn-6" class="btn btn-primary">Youtube</button>
+
+    </div>
+    <script src="./js/07.metodos_attr_removeAttr.js" type="text/javascript"></script>
+</body>
+</html>

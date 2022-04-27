@@ -29,11 +29,6 @@ p{
 }
 
 .btn{
-    display: block;
-    margin: 20px auto;
-
-}
-
-table{
-    margin-top: 30px;
+    display: inline-block;
+    margin: 40px 30px;
 }
