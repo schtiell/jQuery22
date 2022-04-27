@@ -19,7 +19,11 @@ $(function () {
 
     let btn2= $('#boton-2');
     btn2.click(function (){
-        $(".noticia-2").css("font-size","8px");
+        $(".noticia-2").css({
+            fontSize: "8px",
+            color:"red",
+            backgroundColor: "blue"
+        });
     });
 
     let btn3= $('#boton-3');

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- jQuery library -->
+     <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+     <!-- boostrap 4 framework -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+ 
+     <!-- css3 styles -->
+     <link rel="stylesheet" href="./css/06.styles.css">
+ 
+     <!-- favicon -->
+     <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Método text(), text(valor)</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>jQuery:
+            <small>Método text(), text(valor)</small>
+        </h1>
+
+        <hr>
+        
+        <p>Para saber el contenido de un elemento el objeto jQuery cuenta con un método llamado text(), por ejemplo:</p>
+
+        <pre>let x = $("#parrafo1");</pre>
+
+        <p>luego si hacemos x.text() obtenemos el contenido del párrafo con id igual a parrafo1.</p>
+
+        <p>Luego si queremos cambiar el texto del párrafo deberíamos disponer:</p>
+
+        <pre>
+            let x = $("#parrafo1");
+            x.text("Este es el texto nuevo");
+        </pre>
+
+        <p>Pero hay que tener mucho cuidado cuando utilizamos jQuery ya que podemos cambiar el contenido de muchos elementos con una sola llamada al método text, por ejemplo:</p>
+
+        <pre>
+            let x=$("p");
+            x.text("Este texto aparece en todos los párrafos del documento");
+        </pre>
+
+        <p>El código anterior crea un objeto jQuery con la referencia a todos los párrafos contenidos en el documento. Luego si llamamos al método text enviándole una cadena, esta aparecerá en todo el documento remplazando el contenido de los párrafos actuales.</p>
+
+        <hr>
+
+        <h2>
+            Ejercicio: <small>El siguiente problema muestra el acceso y modificación unitaria y múltiple de contenidos de elementos.</small>
+        </h2>
+        <input type="button" value="Obtener el texto contenido en un párrafo" id="boton-1" class="btn btn-primary">
+        <input type="button" value="Modificar el texto de un párrafo" id="boton-2" class="btn btn-primary">
+        <input type="button" value="Modificar el texto de los elementos td de una tabla" id="boton-3" class="btn btn-primary">
+    </div>
+    <script src="./js/06.metodo_text.js" type="text/javascript"></script>
+</body>
+</html>
