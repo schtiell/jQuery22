@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/05.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Selección de elementos utilizando las clases CSS definidas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery:
+            <small> Selección de elementos utilizando las clases CSS definidas</small>
+        </h1>
+
+        <hr>
+
+        <p>Recordemos que definimos clases en CSS cuando una regla de estilo puede ser igual para un conjunto de marcas HTML.</p>
+
+        <p>Mediante este nombre de clase podemos acceder a todos los elementos utilizando la función $:</p>
+
+        <pre>x=$(".nombre de clase");</pre>
+
+        <p><span>Problema:</span> Mostrar una serie de lenguajes de programación y aplicar un estilo resaltado para aquellos lenguajes que son orientados a objetos. Cuando se presione un botón agregar la propiedad background-color a todos los elementos de dicha clase.</p>
+
+        <hr>
+
+        <h2>Lenguajes de Programación</h2>
+
+        <ul>
+            <li class="poo">Java</li>
+            <li class="poo">Python</li>
+            <li class="poo">C++</li>
+            <li>Cobol</li>
+            <li class="poo">C</li>
+            <li>html</li>
+        </ul>
+
+        <button class="btn btn-primary" id="boton">Resaltar POO</button>
+
+        <hr>
+
+        <div class="noticia noticia-1">
+
+            <h2>AMLO pide a Elon Musk eliminar la corrupción de Twitter</h2>
+
+            <p>Luego de que se anunciara la posible compra de Twitter por el empresario Elon Musk, el jefe del Ejecutivo federal hizo un llamado para que se elimine la corrupción dentro de la plataforma y se garantice la libre expresión dentro de ésta.</p>
+
+            <p>
+                <a href="https://www.milenio.com/politica/amlo-temas-conferencia-mananera-26-abril-2022">Ir a la noticia 1</a>
+            </p>
+
+        </div>
+
+        <button id="boton-1" class="btn btn-primary">Get data</button>
+
+        <div class="noticia noticia-2">
+
+            <h2>"Ya no es imprescindible” el uso del cubrebocas, asegura López-Gatell</h2>
+
+            <p>Hugo López-Gatell, subsecretario de Prevención y Promoción de la Salud, aseguró que debido a que el gobierno federal nunca impuso el uso obligatorio del cubrebocas ante la pandemia del Covid-19, éste no declarará el fin de su obligatoriedad, pero manifestó que en este momento, ante el bajo número de contagios y fallecimientos, ya no es “imprescindible” su utilización. </p>
+
+            <p>
+                <a href="https://www.eluniversal.com.mx/nacion/covid-19-ya-no-es-imprescindible-el-uso-del-cubrebocas-asegura-lopez-gatell">Ir a la noticia</a>
+            </p>
+
+            <button id="boton-2" class="btn btn-primary">Get data</button>
+        </div>
+
+        <div class="noticia noticia-3">
+
+            <h2>Bancos extienden su poderío en el país hacia el agua</h2>
+
+            <p>No conformes con dominar el sistema financiero, los grandes bancos que operan en el país, principalmente extranjeros, han comenzado a extender su poder de alcance a un recurso esencial: el agua. Pues de acuerdo con datos oficiales, varios son dueños de importantes concesiones para explotar el líquido en algunas regiones del país, lo que de acuerdo con especialistas, abre la puerta a la especulación.</p>
+
+            <p>
+                <a href="https://www.jornada.com.mx/notas/2022/04/26/economia/bancos-extienden-su-poderio-en-el-pais-hacia-el-agua/">Ir a la noticia</a>
+            </p>
+
+            <button id="boton-3" class="btn btn-primary">Get data</button>
+        </div>
+    </div>
+    <script src="./js/05.select_class.js"></script>
+</body>
+</html>

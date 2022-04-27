@@ -9,7 +9,7 @@ $(function () {
     }
 
     let ocultarFila = function () {
-        let lista = $('#table-1 tr');
+        let lista = $(this)
         lista.css('color', 'red');
     }
 
@@ -17,6 +17,6 @@ $(function () {
     let boton = $('#boton-1');
     boton.click(ocultarLista);
 
-    let fila = $('#table-1 tr');
+    let fila = $('#tabla-1 tr');
     fila.click(ocultarFila);
 });
