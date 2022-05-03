@@ -23,6 +23,10 @@ h2{
     font-weight: bold;
 }
 
+span{
+    font-weight: bold;
+}
+
 p{
     margin: 20px;
     text-align: justify;
@@ -35,4 +39,12 @@ p{
 
 .descripcion{
     background:lightcoral;
+}
+
+.cabecera th{
+    background: #AEB6BF;
+}
+
+.cuerpo td{
+    background: #E8F6F3;
 }
