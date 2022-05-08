@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/09.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Métodos html() y html(valor) para jQuery</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>jQuery:
+            <small> Los métodos html( ) y html(valor)</small>
+        </h1>
+
+        <hr>
+
+        <p>El método:</p>
+
+        <pre>html([bloque html])</pre>
+
+        <p>Permite agregar un bloque de html a partir de un elemento de la página. Básicamente es la propiedad <span>innerHTML</span> del DOM.</p>
+
+        <p>Y el método: </p>
+
+        <pre>html()</pre>
+
+        <p>Retorna el bloque html contenido a partir del elemento html que hace referencia el objeto jQuery</p>
+
+        <hr>
+
+        <h2>Ejercicio1:</h2>
+
+        <p><span>Problema:</span> Disponer dos botones, al ser presionado el primero crear un formulario en forma dinámica que solicite el nombre de usuario y su clave. Si se presiona el segundo botón mostrar todos los elementos HTML del formulario previamente creado.</p>
+
+        <div class="container" id="formulario">
+    
+        </div>
+
+        <p>Hay que diferenciar bien los métodos <span>html(valor) y text(valor)</span>, el segundo como habíamos visto agrega texto a un elemento HTML.
+
+        </p>
+
+        <button id="btn-1" class="btn btn-primary">Add form</button>
+        <button id="btn-2" class="btn btn-primary">Get form</button>
+    </div>
+    <script src="./js/09.metodos_html.js" type="text/javascript"></script>
+</body>
+</html>
