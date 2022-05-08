@@ -33,4 +33,24 @@ $(function () {
     let btn2 = $('#btn-2');
     btn2.click(obtenerFormulario);
 
+
+    //=================== Ejercicio 2:
+
+    let mostrarCabecera = function () {
+        let cabecera = $('head');
+        alert(cabecera.html());
+    }
+
+    let mostrarCuerpo = function () {
+        let cuerpo = $('body');
+        alert(cuerpo.html());
+    }
+
+
+    let boton1 = $('#boton-1');
+    boton1.click(mostrarCabecera);
+
+    let boton2 = $('#boton-2');
+    boton2.click(mostrarCuerpo);
+
 });
