@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/13.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Evento mousemove</title>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery:
+            <small>Evento mousemove</small>
+        </h1>
+
+        <hr>
+
+        <p>Este evento se dispara cuando se mueve la flecha del mouse dentro del elemento HTML respectivo</p>
+
+        <p>Si queremos recuperar la coordenada donde se encuentra en ese momento el mouse, jQuery pasa el objeto event como parámetro (con la ventaja que hace transparente las diferencias entre IE y otros navegadores)</p>
+
+        <p><span>Ejericicio: </span>Capturar el evento mousemove a nivel del objeto document, este se dispara cada vez que desplazamos el mouse dentro de la página. Mostrar la coordenada donde se encuentra la flecha del mouse.</p>
+
+        <hr>
+
+        <div id="cor-x">Coordenada x:</div>
+        <div id="cor-y">Coordenada y:</div>
+
+        <hr>
+
+        <h2>Ejercicio 2:</h2>
+
+        <p>Crear un div de 200 pixeles de ancho y alto. Mostrar luego la coordenada donde se encuentra la flecha del mouse cuando está dentro del div. Mostrar un mensaje si no se encuentra dentro del div.</p>
+
+        <div id="ejercicio">
+            <span id="x">x: </span>
+            <span id="y">y: </span>
+            <span id="msj"> </span>
+        </div>
+    </div>
+
+    <script src="./js/13.mousemove_event.js" type="text/javascript"></script>
+</body>
+</html>
