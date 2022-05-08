@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/14.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+    <title>Eventos mousedown y mouseup con jQuery</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            jQuery:
+            <small>Eventos mousedown y mouseup.</small>
+        </h1>
+
+        <hr>
+
+        <p>El evento mousedown se dispara cuando presionamos alguno de los botones del mouse y el evento mouseup cuando dejamos de presionar el botón.</p>
+
+        <p>Implementemos una página que contenga una tabla con una fila y dos columna, al presionar el botón del mouse dentro de una casilla de la tabla cambiar el color de fondo de la misma por amarillo y cuando levantamos el dedo del mouse regresar a color blanco la casilla.</p>
+
+        <table class="table table-light" id="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Joaquin Sayago</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lourdes Sayago</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2>Ejercicio 2: </h2>
+    
+        <p> <span>Problema</span> Crear una página con dos botones. Al ser presionados cambiar su color de fondo. Retornar al color original cuando se suelta el botón del mouse.</p>
+
+        <button id="btn-1" class="btn btn-primary">Boton 1</button>
+        <button id="btn-2" class="btn btn-primary">Boton 2</button>
+    </div>
+
+    <script src="./js/14.mouseup_down.js" type="text/javascript"></script>
+</body>
+</html>
