@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/10.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Administrar eventos con jQuery</title>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery:
+            <small>Administración de eventos del DOM</small>
+        </h1>
+
+        <hr>
+
+        <p>jQuery facilita la administración de eventos de JavaScript y lo más importante nos hace transparente la <strong>diferencia</strong> en la registración de eventos entre distintos navegadores (IExplorer, FireFox, Chrome, Safari, Opera)</p>
+
+        <p>En este tutorial <strong>ya hemos utilizado</strong> el manejador de eventos:</p>
+
+        <p><pre>$(documento).ready(nombre de función)</pre></p>
+
+        <p>Dijimos que este función que registramos <strong>mediante el método</strong> ready se ejecuta cuando el DOM del documento está en memoria. Si no utilizamos la librería jQuery hacemos esto a través del evento <span>addEventListener </span>.</p>
+
+        <p>Otro evento que vimos <strong>en conceptos</strong> anteriores es el <span>click</span>de un elemento, la sintaxis utilizada: </p>
+        <p>
+            <pre>
+                var x;
+                x=$("button");
+                x.click(presionBoton)
+            </pre>
+        </p>
+
+        <p>Con este pequeño código registramos la función presionBoton para todos los elementos de tipo button del documento.</p>
+
+        <p>Con este otro código:</p>
+
+        <p>
+            <pre>
+                var x;
+                x=$("#boton1");
+                x.click(presionBoton)
+            </pre>
+        </p>
+
+        <p>solo se registra para el elemento con id con valor "boton1".</p>
+
+        <p>Por último con este <strong>código se registra</strong> para todos los elementos "button" que dependen del div con valor de id igual a "formulario1":</p>
+
+        <p>
+            <pre>
+                var x;
+                x=$("#formulario1 button");
+                x.click(presionBoton)
+            </pre>
+        </p>
+
+        <hr>
+
+        <h2>Ejercicio</h2>
+
+        <p>Para reafirmar estos conceptos <strong>confeccionaremos una página</strong> que muestre un párrafo, luego una tabla que contenga dos párrafos y por último otra tabla que contenga dos párrafos. Capturaremos el evento click de todos los párrafos del documento y mostraremos un mensaje indicando:'se presionó un párrafo del documento', <strong>también capturaremos el evento</strong> click de los dos párrafos de la segunda tabla y mostraremos: 'se presionó un párrafo contenido en la segunda tabla.'.</p>
+
+        <p id="p-ejercicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facilis adipisci, cumque dicta <strong> cupiditate sequi commodi. Earum,</strong> exercitationem est praesentium veritatis consectetur modi cumque aliquid eveniet, dignissimos officiis magni fuga!</p>
+
+        <table id="tbl-1" class="table table-light">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Beatae eos animi ipsum iusto similique magnam natus, enim nemo ipsa, omnis voluptas libero eligendi!</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aut amet alias ipsum repellendus, illo nisi aspernatur ab!</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="tbl-2" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><p>Beatae eos animi ipsum iusto similique magnam natus, enim nemo ipsa, omnis voluptas libero eligendi!</p></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aut amet alias ipsum repellendus, illo nisi aspernatur ab!</p></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2>Ejercicio 2:</h2>
+
+        <p><span>Ejercicio: </span>Confeccionar una página que contenga algunas palabras con el elemento 'strong', luego cuando sean presionadas ocultarlas.</p>
+    </div>
+
+    <script src="./js/10.admin_eventos.js" type="text/javascript"></script>
+</body>
+</html>
