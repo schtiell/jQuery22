@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/12.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+    <title>Evento hover con jQuery</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            jQuery:
+            <small>Manejo del evento hover</small>
+        </h1>
+
+        <hr>
+
+        <p>jQuery no solo mapea los eventos del DOM sino que provee otros que combinan estos.</p>
+
+        <p>Como decíamos es habitual utilizar los eventos mouseover y mouseout en común, por eso en jQuery existe un evento llamado hover que tiene dos parámetros:</p>
+
+        <p>
+            <pre>$(elemento).hover([función de ingreso del mouse],[función de salida del mouse])</pre>
+        </p>
+
+        <p>Es decir que al evento hover asociamos dos funciones, la primera se ejecuta cuando ingresamos la flecha del mouse dentro del elemento y la segunda cuando retiramos la flecha del mouse.</p>
+
+        <p>Confeccionaremos el mismo problema del concepto que vimos los eventos mouseover y mouseout.</p>
+
+        <hr>
+
+        <h2>Ejercicio: 1</h2>
+
+        <p>Implementar una página que contenga tres hipervínculos, cuando ingrese la flecha del mouse al hipervínculo cambiaremos el color de fondo, retornando el color original cuando retiramos la flecha del elemento.</p>
+
+        <a href="https://youtube.com">Youtube</a>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://google.com">Google</a>
+
+        <hr>
+
+        <h2>Ejercicio 2:</h2>
+
+        <p><span>Ejercicio: </span>Crear una tabla con dos filas y dos columnas, cambiar el color del interior de la casilla cuando ingresamos con el mouse y dejarla con dicho color cuando retiramos la flecha.</p>
+
+        <table class="table table-light" id="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Joaquin Sayago</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lourdes Sayago</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <script src="./js/12.hover_event.js" type="text/Javascript"></script>
+</body>
+</html>
