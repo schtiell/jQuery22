@@ -22,8 +22,10 @@ $(function () {
     //=================== Ejercicio 2
 
     let ocultarContenido = function () {
-        let palabras = $('strong');
-        palabras.css('display','none');
+        //let palabras = $('strong');
+        //palabras.css('display','none');
+        $(this).hide();
+
     }
 
     let palabras = $('strong');
