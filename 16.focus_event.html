@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+    <!-- boostrap 4 framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css3 styles -->
+    <link rel="stylesheet" href="./css/16.styles.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Evento focus con jQuery</title>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>
+            jQuery:
+            <small>Evento focus</small>
+        </h1>
+
+        <hr>
+
+        <p>El evento focus se produce cuando se activa el control. Podemos capturar el evento focus de un control de tipo text, textarea, button, checkbox, fileupload, password, radio, reset y submit.</p>
+
+        <p>Es común a muchos sitio donde se puede buscar información, disponer un control de tipo text con la leyenda 'Buscar...' y sin ningún botón a su lado. Cuando el control toma foco se borra automáticamente su contenido, el operador ingresa el texto a buscar y presiona la tecla ENTER. Para probar como capturar este evento implementaremos una página que resuelva el problema anteriormente planteado.</p>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="buscar">Realiza tu búsqueda: </label>
+                <input type="text" name="buscar" id="buscar" class="form-control" value="Buscar..." size="20" />
+            </div>
+        </form>
+
+        <hr>
+
+        <h2>Ejercicio 2</h2>
+
+        <p>Disponer dos controles de tipo text con algún contenido. Fijar de color azul su fuente. Al tomar foco el control cambiar a color rojo.</p>
+
+        <form action="#" method="post">
+        
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" value="" size="20" />
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Realiza tu búsqueda: </label>
+                <input type="text" name="apellido" id="apellido" class="form-control" value="Apellido..." size="20" />
+            </div>
+            
+        </form>
+
+    </div>
+
+
+
+    <script src="./js/16.event_focus.js" type="text/Javascript"></script>
+</body>
+</html>
