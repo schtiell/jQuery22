@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- jQuery library -->
+     <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+
+     <!-- boostrap 4 framework -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+ 
+     <!-- css3 styles -->
+     <link rel="stylesheet" href="./css/15.styles.css">
+ 
+     <!-- favicon -->
+     <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <title>Evento doble click con jQuery</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            jQuery
+            <small>Evento doble click</small>
+        </h1>
+
+        <hr>
+
+        <p>El evento dblclick se dispara cuando se presiona dos veces seguidas el botón izquierdo del mouse.</p>
+
+        <p>Para ver el funcionamiento de este evento se creará un div en una coordenada absoluta y lo ocultaremos al hacer doble clic en su interior.</p>
+
+        <div id="recuadro" class="recuadro container">
+            <span>Haz doble click para ocultar el recuadro</span>
+        </div>
+
+        <hr>
+
+        <h2 class="tituloh2">Ejercicio 2:</h2>
+
+        <p><span>Ejercicio: </span>Disponer un div de 800x70 píxeles. Al hacer doble clic redimensionarlo a 250x250 píxeles y si se hace doble clic nuevamente retornar al tamaño 800x70.</p>
+
+        <div id="recuadro-2" class="recuadro recuadro-2 container">
+            <span>Haz doble click para redimensinar</span>
+        </div>
+
+    </div>
+
+    <script src="./js/15.dblclick_event.js" type="text/javascript"></script>
+</body>
+</html>
