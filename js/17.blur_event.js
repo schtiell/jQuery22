@@ -32,8 +32,10 @@ $(function () {
     // ================ Ejercicio 2
 
     let obtenerValor = function () {
-        
+        //Referencia del elemento que dispara el evento
         let texto = $(this);
+
+        //Valor del elemento
         let cadena = texto.val();
 
         if (cadena.length == 0){

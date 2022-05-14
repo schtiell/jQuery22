@@ -12,9 +12,7 @@ $(function () {
     let ocultarElemento = function () {
         
         let contenedor = $("#ejercicio");
-        contenedor.hide("slow", "linear", function (){
-            alert('Elemento oculto');
-        });
+        contenedor.hide(3000);
     }
 
     let boton1 = $("#boton-1");
@@ -22,4 +20,15 @@ $(function () {
 
     let boton2 = $("#boton-2");
     boton2.click(ocultarElemento);
+
+    //============ Ejercicio 2
+
+    let container = $('#ejercicio-2');
+    container.click( function (){
+        $(this).hide("slow");
+
+        setTimeout(function () {
+            container.show();
+        }, 3000);
+    });
 });
