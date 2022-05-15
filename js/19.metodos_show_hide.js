@@ -25,7 +25,7 @@ $(function () {
 
     let container = $('#ejercicio-2');
     container.click( function (){
-        $(this).hide("slow");
+        $(this).hide("slow", "linear", () => alert('Hola'));
 
         setTimeout(function () {
             container.show();
