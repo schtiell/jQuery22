@@ -8,9 +8,10 @@
     <!-- css for bootstrap 4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <!-- bundle bootstrap 4, includes bootstrap.bundle.js, bootstrap.bundle.min.js, poper.js & jQuery -->
+    <!-- jQuery 3.6 for bootstrap 4 -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+    <!-- bundle bootstrap 4, includes bootstrap.bundle.js, bootstrap.bundle.min.js, poper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <!-- css3 styles -->
@@ -52,6 +53,29 @@
             <p>Confeccionar una página que contenga un div con un conjunto de párrafos. Cuando se presione con el mouse dentro del div ocultarlo por decoloración y cuando esté completamente oculto hacer que aparezca lentamente otro bloque.</p>
         </div>
 
+        <p>Las formas de llamar a los métodos fadeIn y fadeOut:</p>
+
+        <p>Lo muestra con una animación rápida:
+            <pre>fadeIn("fast")</pre>
+        </p>
+
+        <p>Lo muestra con una animación normal:
+            <pre>fadeIn("normal")</pre>
+        </p>
+
+        <p>Lo muestra con una animación lenta:
+            <pre>fadeIn("slow")</pre>
+        </p>
+
+        <p>Lo muestra con una animación que tarda tantos milisegundos como le indicamos:
+            <pre>fadeIn([cantidad de milisegundos])</pre>
+        </p>
+
+        <p>Lo muestra con una animación que tarda tantos milisegundos como le indicamos y ejecuta al final la función que le pasamos como segundo parámetro:
+            <pre>fadeIn([cantidad de milisegundos],[función])</pre>
+        </p>
+
+        <p>De forma similar funciona el método fadeOut.</p>
     </div>
     <script src="./js/20.metodos_fadein_fadeout.js"></script>
 </body>
