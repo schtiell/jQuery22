@@ -12,7 +12,7 @@ $(function () {
         let contenedor = $('#horoscopo');
 
         // Escribe en el contenedor una imagen de carga mientras se muestra la info solicitada
-        contenedor.html('<img src="../assets/loading.gif" />');
+        contenedor.html('<img src="../assets/loader.gif" />');
     }
 
     let cargarHoroscopo = function () {
