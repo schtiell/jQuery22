@@ -1,6 +1,8 @@
 <?php
 
     header('Content-Type: text/html; charset=UTF-8');
+
+    sleep(3);
     
     if ($_REQUEST['cod']==1)
         echo "<strong>Aries:</strong> Hoy los cambios serán físicos, personales, de carácter, Te sentirás impulsivo y tomarás iniciativas. Período en donde considerarás unirte a agrupaciones de beneficencia, o de ayuda a los demás.";
