@@ -12,13 +12,21 @@ $(function () {
 
         // Referencia del valor capturado en el textbox
         let num = $('#numero').val();
+        let nom = $('#nombre').val();
+        let correo = $('#email').val();
 
-        // El método get indicando la url del servidor, la información a procesar, el objeto literal con todos los claves y valores, en este caso solo hay un dato.  y la funcion anonima o declarada fuera del bloque que procesará la información devuelta al servidor
-        $.get("../php/pagina2.php", { numero : num },
-            function (data, textStatus, jqXHR) {
-                console.log('Data: ' + data + '\nStatus: ' + textStatus);
-                alert(data);
-            }
+        // El método get indicando la url del servidor, la información a procesar, el objeto literal con todos los claves y valores  y la funcion anonima o declarada fuera del bloque que procesará la información devuelta al servidor
+        $.get("../php/pagina2.php", 
+                { 
+                    numero  :   num,
+                    nombre  :   nom,
+                    email   :   correo
+                },
+
+                function (data, textStatus, jqXHR) {
+                    console.log('Data: ' + data + '\nStatus: ' + textStatus);
+                    alert(data);
+                }
         );
         
         // Para evitar que el sitio valla buscando la url del servidor

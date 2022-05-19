@@ -23,7 +23,7 @@
     <title>Métodos get y post de aJax y jQuery</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container border">
         <h1>
             jQuery:
             <small>Pasando datos al servidor por los métodos GET y POST</small>
@@ -56,19 +56,28 @@
 
         <p><span>Ejercicio: </span>Implementar una aplicación que calcule el cuadrado de un número que ingresamos por teclado. La operación se realiza en el servidor, le enviamos los datos mediante la función de jQuery $.get</p>
 
-        <div class="container border">
+        <div class="container border" id="div-form">
 
             <form action="./php/pagina2.php" method="post" id="formulario">
 
                 <div class="form-group">
-                    <label for="numero">Ingrese un numero:</label>
-                    <input type="text" name="numero-text" class="form-control" id="numero" size="4">
-                    <button class="btn btn-primary" id="boton">Calcular cuadrado</button>
+                    <label for="numero">Ingrese un numero: </label>
+                    <input type="number" name="numero-text" class="form-control" id="numero" size="4">
                 </div>
 
+                <div class="form-group">
+                    <label for="nombre">Ingrese su nombre: </label>
+                    <input type="text" name="nombre-text" class="form-control" id="nombre" size="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Ingrese su email: </label>
+                    <input type="email" name="email-text" class="form-control" id="email" size="20">
+                </div>
+
+                <button class="btn btn-primary" id="boton">Enviar datos</button>
             </form>
         </div>
-
     </div>
     <script src="./js/26.metodos_get_post.js" type="text/javascript"></script>
 </body>
