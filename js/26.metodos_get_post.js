@@ -2,13 +2,11 @@
 
 //jQuery metodo corto
 $(function () {
-    
-    // Mensaje en consola
-    console.log("Métodos get y post de aJax y jQuery");
 
+    // Método Get
 
     // Declaración de la función enviarNumero
-    let enviarNumero = function () {
+    let enviarDatosGet = function () {
 
         // Referencia del valor capturado en el textbox
         let num = $('#numero').val();
@@ -35,5 +33,31 @@ $(function () {
 
     // Referencia del boton el cual espera el evento click para llamar a la funcion enviarNumero
     let boton = $('#boton');
-    boton.click(enviarNumero);
+    boton.click(enviarDatosGet);
+
+
+    // Método post
+
+    let enviarDatosPost = function () {
+        
+        let id = $('#id');
+        let user = $('#username');
+        let pass = $('#password');
+
+        $.post("../php/pagina3.php", {
+            id :    id,
+            username : user,
+            password : pass
+        },
+         function (data, textStatus, jqXHR ) {
+             console.log('Data: ' + data + '\nStatus: ' + textStatus);
+             alert(data);
+         });
+
+        return false;
+    }
+
+    // Referencia del boton para enviar datos por el emtodo post
+    let botonPost = $('#boton-post');
+    botonPost.click(enviarDatosPost);
 });
