@@ -40,15 +40,16 @@ $(function () {
 
     let enviarDatosPost = function () {
         
-        let id = $('#id');
-        let user = $('#username');
-        let pass = $('#password');
+        let id = $('#id').val();
+        let user = $('#username').val();
+        let pass = $('#password').val();
 
         $.post("../php/pagina3.php", {
             id :    id,
             username : user,
             password : pass
         },
+
          function (data, textStatus, jqXHR ) {
              console.log('Data: ' + data + '\nStatus: ' + textStatus);
              alert(data);
