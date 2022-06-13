@@ -1,8 +1,8 @@
 <?php
 
-    echo "Respuesta del servidor para el ejercicio 28";
+    sleep(3);
 
     $cuadrado = $_REQUEST['numero'] * $_REQUEST['numero'];
 
-    return $cuadrado;
+    echo $cuadrado;
 ?>

@@ -56,19 +56,18 @@
 
             <p><span>Ejercicio: </span>Implementar una aplicación que calcule el cuadrado de un número que ingresamos por teclado. La operación se realiza en el servidor, le enviamos los datos mediante la función de jQuery $.ajax</p>
             
-            <form action="./php/pagina4.php" method="post">
+            <form action="./php/pagina5.php" method="post" id="formulario">
 
                 <div class="form-group">
                     <label for="numero">Ingresa un numero: </label>
-                    <input id="numero" class="form-control" type="number" name="numero">
+                    <input type="number" id="numero" class="form-control" name="numero">
 
                     <button id="btn-enviar" class="btn btn-primary">Calcular</button>
                 </div>
-
-                <div id="resultado">
-
-                </div>
             </form>
+
+            <div id="resultado">
+            </div>
         </div>
     </div>
     <script src="./js/28.ajax.js" type="javascript"></script>

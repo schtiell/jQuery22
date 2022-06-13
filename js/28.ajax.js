@@ -13,6 +13,7 @@ $(function () {
             async: true,
             type: "POST",
             url: "../php/pagina5.php",
+            contentType: "application/x-www-form-urlencoded",
             data: "numero=" + numero,
             dataType: "HTML",
 
@@ -33,6 +34,8 @@ $(function () {
                 contenedor.text('Problemas con el servidor');
             }
         });
+
+        return false;
     }
 
     let boton = $('#btn-enviar');
