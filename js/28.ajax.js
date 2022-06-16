@@ -1,43 +1,42 @@
- 
-
-//Ajax Metodo corto
+// jQuery método corto
 $(function () {
+
+  let solicitarDatos = function () {
     
-    console.log('$.ajax');
+    let num = $("#numero").val();
 
-    let realizarCalculo = function () {
-        
-        let numero = $('#numero').val();
+    console.log(`Ejercicio de ajax el valor del numero ${v}`);
 
-        $.ajax({
-            async: true,
-            type: "POST",
-            url: "../php/pagina5.php",
-            contentType: "application/x-www-form-urlencoded",
-            data: "numero=" + numero,
-            dataType: "HTML",
+    $.ajax({
+      async: true,
+      type: "POST",
+      dataType: "html",
+      contentType: "application/x-www-form-urlencoded",
+      url: "../php/pagina5.php",
+      data: "numero=" + num,
+      beforeSend: inicioEnvio,
+      success: llegadaDatos,
+      timeout: 4000,
+      error: problemas
+    });
 
-            beforeSend: function() {
-                let contenedor = $('#resultado');
-                contenedor.html('<img src="../assets/loader.gif" >');
-            },
+    return false;
+  }
 
-            success: function (response) {
-                let contenedor = $('#resultado');
-                contenedor.text(response)
-            },
+  let inicioEnvio = function () {
+    let container = $("#resultados");
+    container.html('<img src="../assets/loader.gif">');
+  }
+  
+  let llegadaDatos = function (datos) {
+    $("#resultados").text(datos);
+  }
+  
+  let problemas = function () {
+    $("#resultados").text('Problemas en el servidor.');
+  }
 
-            timeout: 4000,
 
-            error: function (){
-                let contenedor = $('#resultado');
-                contenedor.text('Problemas con el servidor');
-            }
-        });
-
-        return false;
-    }
-
-    let boton = $('#btn-enviar');
-    boton.click(realizarCalculo);
+  let boton = $('#btn-enviar');
+  boton.click(solicitarDatos);
 });
