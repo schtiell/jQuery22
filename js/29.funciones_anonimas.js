@@ -26,4 +26,13 @@ $(function () {
         titulo.css('background-color', '#ff0000');
         titulo.css('font-family', 'Arial');
     });
+
+
+    // Ejercicio 2
+
+    $('#user-tables tr').click(function (e) { 
+        let fila = $(this);
+        fila.css('background-color', '#D6EAF8');
+        fila.css('color', '#E74C3C ');
+    });
 });
