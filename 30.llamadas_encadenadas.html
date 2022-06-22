@@ -35,9 +35,9 @@
         <p>Para entender esta sintaxis implementaremos un problema.</p>
 
         <div class="container border">
-             <p><span>Ejercicio: </span>Confeccionar una página que muestre un recuadro con texto. Disponer dos botones, uno que cambie la opacidad lentamente hasta el valor 0.5, seguidamente oculte el recuadro también lentamente, y el otro botón que lo muestre en forma instantánea y aumente su opacidad al 100%.</p>
+            <p><span>Ejercicio: </span>Confeccionar una página que muestre un recuadro con texto. Disponer dos botones, uno que cambie la opacidad lentamente hasta el valor 0.5, seguidamente oculte el recuadro también lentamente, y el otro botón que lo muestre en forma instantánea y aumente su opacidad al 100%.</p>
 
-             <div class="container recuadro" id="descripcion">
+            <div class="container recuadro" id="descripcion">
                 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, debitis! Itaque perspiciatis reprehenderit commodi omnis? </p>
 
@@ -46,10 +46,10 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque et quisquam suscipit temporibus nisi nostrum voluptas modi ratione dolorem rem.</p>
 
                 <p>autem dignissimos nihil debitis repellendus quis quam placeat in expedita!</p>
-             </div>
+            </div>
 
-                <button id="boton-1" class="btn btn-primary">Reducir Opacidad</button>
-                <button id="boton-2" class="btn btn-primary">Mostrar en forma</button>
+            <button id="boton-1" class="btn btn-primary">Reducir Opacidad</button>
+            <button id="boton-2" class="btn btn-primary">Mostrar en forma</button>
         </div>
 
         <p>Primero se obtiene la referencia del id descripcion, la función $ retorna un objeto jQuery que se utiliza directamente para llamar al método fadeTo para aumentar su opacidad lentamente. Seguidamente el método fadeTo nos retorna la referencia del objeto jQuery y la utilizamos para llamar al método hide indicándole que oculte el div lentamente.</p>

@@ -1,0 +1,62 @@
+.container{
+    display: block;
+    text-align: center;
+    background-color: #FAFAFA;
+    color: #212F3D;
+    font-size: 16px;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+small{
+    display: block;
+    color: #8C9193;
+}
+
+hr{
+    margin: 40px;
+}
+
+h1,
+h2{
+    margin: 30px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+span{
+    font-weight: bold;
+}
+
+pre{
+    text-align: left;
+    margin: 10px 20px;
+    font-style: italic;
+    
+}
+
+p{
+    margin: 20px;
+    text-align: justify;
+}
+
+/* Estilos definidos para el ejercicio*/
+
+.cuadradito{
+    /*display: inline-block;*/
+    background-color: #f00;
+    height: 50px; 
+    width: 100px;
+    margin:20px 25px;
+    z-index: -1;
+  }
+  
+  #divmensaje {
+    background-color: yellow;
+    position: absolute; 
+    padding: 5px;
+    width:250px;
+    left:120px;
+    top:100px;
+    z-index: 100;
+  }
