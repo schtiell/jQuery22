@@ -4,11 +4,11 @@
 
 $(function () {
 
-    let titulo1 = $("#titulo-1");
+    let titulo1 = $("#titulo1");
     titulo1.click(cambiarColorFondo);
 
 
-    let titulo2 = $('#titulo-2');
+    let titulo2 = $('#titulo2');
     titulo2.click(cambiarColorFuente)
 
     let tabla = $('#table');
@@ -16,20 +16,20 @@ $(function () {
 
 
     function cambiarColorFondo() {
-        let titulo = $('#titulo-1');
-        titulo.css('background', 'silver');
-        titulo.css('font-size', '20px');    
+        let titulo = $('#titulo1');
+        titulo.css('background', '#22C2F7');
+        titulo.css('color', '#5E6B6F ');    
     }
 
     function cambiarColorFuente() {
-        let titulo = $('#titulo-2');
-        titulo.css('color','red');
-        titulo.css('font-family','Tahoma');
+        let titulo = $('#titulo2');
+        titulo.css('font-size','40px');
+        titulo.css('font-family','Verdana');
     }
 
     function tunearTabla() {
-        let tabla = $('#table');
-        tabla.css('background', '#96D4D4');
+        let tabla = $('#table td');
+        tabla.css('background', '#FAD7A0');
     }
 
 });
