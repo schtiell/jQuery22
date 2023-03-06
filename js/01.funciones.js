@@ -1,11 +1,11 @@
-//javascrip tradicional
 
-//Funcion asiginada a una variable que escucha el evento click del elemento con id js-tradicional
+//Javascript
 let iniciarEventos = function () {
-    let boton1 = document.querySelector('#js-tradicional');
+    let boton1 = document.querySelector('#javascript');
+    
     boton1.addEventListener('click', e =>{
 
-        alert('Se presionó el boton utilizando Javascript tradicional');
+        alert('Evento "click" capturado con javascript clásico');
     }, false);
 }
 
@@ -14,19 +14,20 @@ $(document).ready( function() {
 
     //Evento click sobre el boton
     let boton = $('#jquery');
-    boton.click( () =>  {
-        alert("Mensaje mostrado utilizando jQuery");
+
+    boton.click( () => {
+        alert('Evento "click" capturado con jQuery');
     });
 
     //Evento click sobre el parrafo
-    let parrafo = $('#parrafo-1');
+    let parrafo = $('#parrafo');
+
     parrafo.click( () => {
         console.info("Click sobre el parrafo");
     });
 
 });
 
-
-//Evento DOMContentLoaded – DOM está listo, por lo que el controlador puede buscar nodos DOM, inicializar la interfaz.
+//Evento DOMContentLoaded, el DOM está listo, por lo que el controlador puede buscar nodos DOM e inicializar la interfaz.
 addEventListener('DOMContentLoaded', iniciarEventos, false);
 
