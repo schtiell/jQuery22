@@ -1,6 +1,6 @@
 
 //jQuery
-$(document).ready(function(){
+$(function () {
     
     //Ejercicio 1...........
     let addAttr = function () {
@@ -11,7 +11,7 @@ $(document).ready(function(){
     let getInfoAttr = function () {
         let tabla = $('#table');
         if (tabla.attr('border') != undefined) {
-            console.log(tabla.attr('border'));
+            console.log(`El ancho definido del borde es: ${tabla.attr('border')}`);
         } else {
             console.log('No se puede mostrar el atributo ya que no está definido');
         }
@@ -28,13 +28,13 @@ $(document).ready(function(){
         
     }
 
-    let agregarAtributo = $('#btn-1');
+    let agregarAtributo = $('#btn1');
     agregarAtributo.click(addAttr);
 
-    let obtenerAtributo = $('#btn-2');
+    let obtenerAtributo = $('#btn2');
     obtenerAtributo.click(getInfoAttr);
 
-    let eliminarAtributo = $('#btn-3')
+    let eliminarAtributo = $('#btn3')
     eliminarAtributo.click(deleteAttr);
 
 
@@ -59,13 +59,13 @@ $(document).ready(function(){
     }
 
 
-    let google = $('#btn-4');
+    let google = $('#btn4');
     google.click(linkToGoogle);
 
-    let facebook = $('#btn-5');
+    let facebook = $('#btn5');
     facebook.click(linkToFb)
 
-    let youtube = $('#btn-6');
+    let youtube = $('#btn6');
     youtube.click(linkToYoutube);
 
 });
