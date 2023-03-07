@@ -8,3 +8,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 2. jQuery: Selectores, por el #id de un elemento del DOM.
 3. jQuery: Selectores, por el elemento html.
 4. jQuery: Selectores css.
+5. jQuery: Selectores de clases.
