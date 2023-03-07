@@ -9,3 +9,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 3. jQuery: Selectores, por el elemento html.
 4. jQuery: Selectores css.
 5. jQuery: Selectores de clases.
+6. jQuery: Método text() text(value).
