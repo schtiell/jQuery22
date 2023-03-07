@@ -63,12 +63,13 @@ pre{
 }
 
 ul{
-	list-style-image: url("../ico/js2.png");
+	list-style-image: url("../ico/jquerylist-ico.png");
+    
     margin: 40px 30px;
 }
 
 ul li{
-	text-align: justify;
+	text-align: left;
     text-indent: 10px;
     margin-bottom: 15px;
 }
@@ -80,4 +81,8 @@ ol{
 ol > li{
     text-align: justify;
     margin-bottom: 10px;
+}
+
+#boton{
+    margin: 30px auto;
 }

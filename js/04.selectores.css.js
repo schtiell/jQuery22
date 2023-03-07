@@ -1,22 +1,19 @@
-
 //jQuery
 $(function () {
     
-    //
     let ocultarLista = function () {
         let lista = $('#lista-2 li');
         lista.hide();
     }
 
-    let ocultarFila = function () {
-        let lista = $(this)
+    let colorearFila = function () {
+        let lista = $(this);
         lista.css('color', 'red');
     }
 
-
-    let boton = $('#boton-1');
+    let boton = $('#boton');
     boton.click(ocultarLista);
 
-    let fila = $('#tabla-1 tr');
-    fila.click(ocultarFila);
+    let fila = $('#table1 tr');
+    fila.click(colorearFila);
 });

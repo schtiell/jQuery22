@@ -1,53 +1,14 @@
-.container{
-    display: block;
-    text-align: center;
-    background-color: #FAFAFA;
-    color: #212F3D;
-    font-size: 16px;
-    padding: 20px 30px;
+.lista{
+    
+    border: 1px solid #A3B0E4;
+    border-radius: 5px;
+    margin: 20px auto;
 }
 
-small{
-    display: block;
-    color: #8C9193;
-}
-
-hr{
-    margin: 40px;
-}
-
-h1,
-h2{
-    margin: 30px auto;
-    text-align: center;
-    font-weight: bold;
-}
-
-h2{
-    text-align: left;
-}
-
-p{
-    margin: 20px;
-    text-align: justify;
-}
-
-button{
-    display: block;
-    margin: 10px 30px;
-}
-
-ul{
-    list-style-type: disclosure-closed;
-    list-style-position: inside;
-}
-
-li{
-    text-align: left;
-}
-
-.col-lg-4{
-    border: 1px solid #000;
+.table{
     margin: 20px 10px;
-    width: 23%;
+}
+
+tfoot td{
+    font-weight: bold;
 }

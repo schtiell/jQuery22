@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- cdn jquery for bootstrap framework-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <!-- Importando el CDN "Content Delivery Network" de bootstrap 4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+	<!-- css3 for bootstrap  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!-- cdn bundle bootstrap include Popper  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <!-- Importando el css3 -->
+    <link rel="stylesheet" href="./css/00.default.css" type="text/css">
+    <link rel="stylesheet" href="./css/04.styles.css">
+
+    <title>jQuery: Selectores CSS</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            jQuery:
+            <small>Selectores CSS</small>
+        </h1>
+
+        <hr>
+
+        <p>Una de las características más interesantes de jQuery es poder obtener la referencia de elementos del DOM utilizando para ello selectores de CSS (Significa que el manejo de Hojas de estilo nos facilita las cosas)</p>
+
+
+        <pre>
+            let x=$("li");
+        </pre>
+
+        <div class="container ejercicio">
+
+            <h2>Ejercicio</h2>
+
+            <hr>
+
+            <p><span>Ejercicio:</span> ocultar todos los list item de una lista desordenada, dispondremos dos listas en la página por lo que conocemos hasta ahora no nos sirve indicar:</p>
+
+            <p>ya que esto nos selecciona todos los elementos de tipo li de la página y nosotros queremos solo los de una de las listas.</p>
+
+            <div class="row">
+            
+                <div class="col-sm-6">
+                    <div class="lista">
+                        <h2>Lista #1</h2>
+                        <hr>
+                        <ul id="lista-1">
+                            <li>Elemento: A</li>
+                            <li>Elemento: B</li>
+                            <li>Elemento: C</li>
+                            <li>Elemento: D</li>
+                            <li>Elemento: E</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-sm-6">
+                    <div class="lista">
+                        <h2>Lista #2</h2>
+                        <hr>
+                        <ul id="lista-2">
+                            <li>Elemento: 1</li>
+                            <li>Elemento: 2</li>
+                            <li>Elemento: 3</li>
+                            <li>Elemento: 4</li>
+                            <li>Elemento: 5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="lista">
+                        <h2>Lista #3</h2>
+                        <hr>
+                        <ul id="lista-3">
+                            <li>Elemento: i</li>
+                            <li>Elemento: ii</li>
+                            <li>Elemento: iii</li>
+                            <li>Elemento: iv</li>
+                            <li>Elemento: v</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-sm-6">
+                    <div class="lista">
+                        <h2>Lista #4</h2>
+                        <hr>
+                        <ul id="lista-4">
+                            <li>Elemento: I</li>
+                            <li>Elemento: II</li>
+                            <li>Elemento: III</li>
+                            <li>Elemento: IV</li>
+                            <li>Elemento: V</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <button id="boton" class="btn btn-primary">Ocultar lista</button>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Tabla no. 1</h2>
+                    <hr>
+                    <table id="table1" class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Mes</th>
+                                <th>Enero</th>
+                                <th>Febrero</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td>Total</td>
+                                <td>30</td>
+                                <td>42</td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>Agua</td>
+                                <td>10</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>Gas</td>
+                                <td>5</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Luz</td>
+                                <td>15</td>
+                                <td>17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-sm-6">
+                    <h2>Tabla no. 2</h2>
+                    <hr>
+                    <table id="table2" class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Mes</th>
+                                <th>Abril</th>
+                                <th>Mayo</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td>Total</td>
+                                <td>55</td>
+                                <td>84</td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>Luz</td>
+                                <td>23</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Cable</td>
+                                <td>12</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>Despensa</td>
+                                <td>20</td>
+                                <td>21</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+        </div>        
+    </div>
+
+    <!-- jQuery -->
+    <script src="./js/04.selectores.css.js"></script>
+</body>
+</html>
