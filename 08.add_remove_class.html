@@ -5,85 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- jQuery library -->
-    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+    <!-- cdn jquery for bootstrap framework-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-    <!-- boostrap 4 framework -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Importando el CDN "Content Delivery Network" de bootstrap 4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <!-- css3 styles -->
-    <link rel="stylesheet" href="./css/08.styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+	<!-- css3 for bootstrap  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!-- cdn bundle bootstrap include Popper  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
 
-    <title>Métodos addClass y removeClass</title>
+    <!-- Importando el css3 -->
+    <link rel="stylesheet" href="./css/00.default.css" type="text/css">
+    <link rel="stylesheet" href="./css/08.styles.css">
+
+    <title>jQuery: addClass() & removeClass()</title>
 </head>
 <body>
     <div class="container">
         <h1>
             jQuery:
-            <small>Métodos addClass y removeClass</small>
+            <small>addClass() & removeClass()</small>
         </h1>
 
         <hr>
 
-        <p>Los métodos addClass y removeClass nos permiten asociar y desasociar una clase a un elemento o conjunto de elementos HTML.</p>
+        <p>Los <span>métodos addClass() y removeClass()</span> permiten asociar y desasociar una clase a un elemento o conjunto de elementos HTML.</p>
 
-        <hr>
+        <p><span>El método addClass(  )</span>  agrega uno o más nombres de clase a los elementos seleccionados. Este método no elimina los atributos de clase existentes, solo agrega uno o más nombres de clase al atributo de clase.</p>
 
-        <h2>Ejercicio1:
-            <small></small>
-        </h2>
+        <p>Sintaxis:</p>
 
-        <p id="contenedor"><span>Problema:</span> Disponer un div con un conjunto de párrafos. Cuando se presione un botón asociarle una clase y cuando se presione otro desasociarlo de dicha clase.</p>
+        <pre>
+            $(selector).addClass(classname)
+        </pre>
 
-        <div class="container">
+        <p>El <span>Método removeClass(  )</span> remueve una o mas nombres de clases de los elementos seleccionados.</p>
 
-            <p>HTML es el lenguaje que se emplea para el desarrollo de páginas de internet.</p>
+        <p>Sintaxis:</p>
 
-            <p>Este lenguaje está constituido de elementos que el navegador interpreta y las despliega en la pantalla de acuerdo a su objetivo. Veremos que hay elementos para disponer imágenes sobre una página, hipervínculos que nos permiten dirigirnos a otra página, listas, tablas para tabular datos, etc.</p>
+        <pre>$(selector).removeClass(classname)</pre>
 
+        <div class="container ejercicio">
+
+            <h2>
+                Ejercicio:
+            </h2>
+
+            <hr>
+    
+            <p><span>Problema:</span> Disponer un div con un conjunto de párrafos. Cuando se presione un botón asociarle una clase y cuando se presione otro desasociarlo de dicha clase.</p>
+    
+            <div class="container">
+    
+                <p id="parrafo">HTML es el lenguaje que se emplea para el desarrollo de páginas de internet.</p>
+    
+                <p>Este lenguaje está constituido de elementos que el navegador interpreta y las despliega en la pantalla de acuerdo a su objetivo. Veremos que hay elementos para disponer imágenes sobre una página, hipervínculos que nos permiten dirigirnos a otra página, listas, tablas para tabular datos, etc.</p>
+            </div>
+    
+            <button class="btn btn-primary" id="btn1">Agregar clase</button>
+            <button class="btn btn-warning" id="btn2">Eliminar clase</button>
+
+            <h2>
+                Ejercicio2:
+            </h2>
+    
+            <p><span>Ejercicio: </span> Definir una tabla con un conjunto de filas y columnas. Definir dos estilos, uno para la sección thead y otro para la sección tbody. Mediante dos botones permitir asociar y desasociar clases.</p>
+    
+            <table class="table table-striped" id="tbl-data">
+                <thead>
+                    <th>#</th>
+                    <th>Nombre: </th>
+                    <th>Teléfono: </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Joaquin Sayago</td>
+                        <td>+52 22887766</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ruby Contreras</td>
+                        <td>+52 22445566</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pato Sambrano</td>
+                        <td>+52 22665544</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <button class="btn btn-primary" id="btn-tbl-1">Agregar clase</button>
+            <button class="btn btn-warning" id="btn-tbl-2">Remover clase</button>
+            
         </div>
 
-        <button class="btn btn-primary" id="btn-1">Agregar clase</button>
-        <button class="btn btn-primary" id="btn-2">Eliminar clase</button>
 
-        <hr>
-
-        <h2>Ejercicio2:
-            <small></small>
-        </h2>
-
-        <p><span>Ejercicio: </span> Definir una tabla con un conjunto de filas y columnas. Definir dos estilos, uno para la sección thead y otro para la sección tbody. Mediante dos botones permitir asociar y desasociar clases.</p>
-
-        <table class="table table-light" id="tbl-data">
-            <thead>
-                <th>#</th>
-                <th>Nombre: </th>
-                <th>Teléfono: </th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Joaquin Sayago</td>
-                    <td>+52 22887766</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ruby Contreras</td>
-                    <td>+52 22445566</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Pato Sambrano</td>
-                    <td>+52 22665544</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <button class="btn btn-primary" id="btn-tbl-1">Agregar clase</button>
-        <button class="btn btn-warning" id="btn-tbl-2">Remover clase</button>
+        
     </div>
 
     <script src="./js/08.add_remove_class.js" type="text/javascript"></script>

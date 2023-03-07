@@ -4,18 +4,20 @@ $(function () {
 
     //Funcion para agregar el atributo clase al parrafo
     let agregarClase = function () {
-        let contenedor = $('#contenedor');
+        let contenedor = $('#parrafo');
         contenedor.addClass('descripcion');
+        console.log(`Clase descripción agregada al elemento con id #parrafo`);
     }
 
     //Función para eliminar el atributo clase de un parrafo
     let removerClase = function () {
-        let contenedor = $('#contenedor');
+        let contenedor = $('#parrafo');
 
         //Si el elemento tiene una clase definida
         if (contenedor.attr('class') != undefined) {
             contenedor.removeClass('descripcion');  //Elimina la clase descripcion
             contenedor.removeAttr('class');         //Elimina el atributo clase
+            console.log(`Clase descripción eliminada del elemento con id #parrafo`);
 
         } else {
             console.info('El elemento no tiene esa clase definida');
@@ -24,10 +26,10 @@ $(function () {
     }
 
     //Referencias de los botones
-    let btn1 = $('#btn-1');
+    let btn1 = $('#btn1');
     btn1.click(agregarClase);
 
-    let btn2=$('#btn-2');
+    let btn2=$('#btn2');
     btn2.click(removerClase);
 
 
