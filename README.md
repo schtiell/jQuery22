@@ -13,3 +13,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 7. jQuery: Método attr(), attr(property,value), removeAttr(property), para agregar propiedades, propiedades y valores y eliminar las mismas utilizando estos métodos.
 8. jQuery: Método addClass() & removeClass(), para agregar o quitar clases a los elementos html.
 9. jQuery: Método html(html code) para insertar bloques de código html al DOM o bien obtener bloques de código html de los elementos seleccionados.
+10. jQuery: Manejo de eventos del DOM.
