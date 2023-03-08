@@ -1,7 +1,4 @@
 
-//Metodo largo
-//$(document).ready(fun());
-
 //jQuery abreviado
 $(function () {
     
@@ -9,28 +6,35 @@ $(function () {
     let generarFormulario = function () {
         let form = $('#formulario');
         form.html(
-            '<form method="get" action=""> ' + 
-                '<label for="nombre"> Nombre: </label>' +
-                '<input type="text" id="nombre" class="form-control">' +
-
-                '<label for="password"> Password: </label>' +
-                '<input type="password" id="password" class="form-control">' +
-            '</form>'
+            `
+            <form method="get" action="">
+                <div class="form-group row">
+                    <label for="nombre" class="col-sm-4 col-form-label">Nombre:</label>
+                    <div class="col-sm-8">
+                        <input type="text" id="nombre" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-4 col-form-label">Password:</label>
+                    <div class="col-sm-8">
+                        <input type="password" id="password" class="form-control" />
+                    </div>
+                </div>
+            </form>`
         );
     }
 
     let obtenerFormulario = function (){
         let form = $("#formulario");
         alert(form.html());
-        
+        console.log(form.html());
     }
 
-
     //Botones
-    let btn1 = $('#btn-1');
+    let btn1 = $('#btn1');
     btn1.click(generarFormulario);
 
-    let btn2 = $('#btn-2');
+    let btn2 = $('#btn2');
     btn2.click(obtenerFormulario);
 
 
@@ -46,11 +50,9 @@ $(function () {
         alert(cuerpo.html());
     }
 
-
-    let boton1 = $('#boton-1');
+    let boton1 = $('#boton1');
     boton1.click(mostrarCabecera);
 
-    let boton2 = $('#boton-2');
+    let boton2 = $('#boton2');
     boton2.click(mostrarCuerpo);
-
 });

@@ -5,67 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- jQuery library -->
-    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+    <!-- cdn jquery for bootstrap framework-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-    <!-- boostrap 4 framework -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Importando el CDN "Content Delivery Network" de bootstrap 4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <!-- css3 styles -->
-    <link rel="stylesheet" href="./css/09.styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+	<!-- css3 for bootstrap  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!-- cdn bundle bootstrap include Popper  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
 
-    <title>Métodos html() y html(valor) para jQuery</title>
+    <!-- Importando el css3 -->
+    <link rel="stylesheet" href="./css/00.default.css" type="text/css">
+    <link rel="stylesheet" href="./css/09.styles.css">
+
+    <title>jQuery: Metodos html() & html(value)</title>
 </head>
 <body>
     <div class="container">
 
-        <h1>jQuery:
-            <small> Los métodos html( ) y html(valor)</small>
+        <h1>
+            jQuery:
+            <small> Métodos html( ) & html(valor)</small>
         </h1>
 
         <hr>
 
-        <p>El método:</p>
+        <p>El <span>Método html( )</span>, permite agregar un bloque de html a partir de un elemento de la página. Básicamente es la propiedad <span>innerHTML</span> del DOM. El método html() establece o devuelve el contenido (innerHTML de javascript) de los elementos seleccionados. Cuando se usa este método para devolver contenido, devuelve el contenido del <span>primer</span> elemento coincidente.</p>
 
-        <pre>html([bloque html])</pre>
+        <p>Cuando se utiliza este método para configurar el contenido, sobrescribe el contenido de TODOS los elementos coincidentes.</p>
 
-        <p>Permite agregar un bloque de html a partir de un elemento de la página. Básicamente es la propiedad <span>innerHTML</span> del DOM.</p>
+        <p>Sintaxis:</p>
 
-        <p>Y el método: </p>
+        <pre>
+            $(selector).html(html content);
 
-        <pre>html()</pre>
+            o 
 
-        <p>Retorna el bloque html contenido a partir del elemento html que hace referencia el objeto jQuery</p>
+            $(selector).html(function (index, currentContent));
+        </pre>
 
-        <hr>
+        <p>Por ejemplo:</p>
 
-        <h2>Ejercicio1:</h2>
+        <pre>
+            $("button").click(function(){
+                $("p").html("Hello <b>world</b>!");
+            });
+        </pre>
 
-        <p><span>Problema:</span> Disponer dos botones, al ser presionado el primero crear un formulario en forma dinámica que solicite el nombre de usuario y su clave. Si se presiona el segundo botón mostrar todos los elementos HTML del formulario previamente creado.</p>
+        <p>El bloque de código jQuery muestra que la hacer click sobre el boton, inserta sobre el primer elemento parrado el bloque de código html indicado en el método html.</p>
 
-        <div class="container" id="formulario">
-    
+        
+        <p>El método html() retorna el bloque html contenido a partir del elemento html que hace referencia el objeto jQuery</p>
+
+        <div class="container ejercicio">
+
+            <h2>Ejercicio 1:</h2>
+
+            <hr>
+
+            <p><span>Problema:</span> Disponer dos botones, al ser presionado el primero crear un formulario en forma dinámica que solicite el nombre de usuario y su clave. Si se presiona el segundo botón mostrar todos los elementos HTML del formulario previamente creado.</p>
+
+            <div class="container" id="formulario"></div>
+
+            <button id="btn1" class="btn btn-primary">Add form</button>
+            <button id="btn2" class="btn btn-primary">Get form</button>
+
+            <h2>Ejercicio 2:</h2>
+
+            <hr>
+
+            <p><span>Ejericicio: </span>Confeccionar una página que tenga dos botones. El primero debe mostrar en un alert el contenido HTML de la cabecera de la página y el segundo el contenido HTML del cuerpo de la página.</p>
+
+            <button class="btn btn-primary" id="boton1">Mostrar cabecera</button>
+            <button class="btn btn-primary" id="boton2">Mostrar cuerpo</button>
+            
         </div>
-
-        <p>Hay que diferenciar bien los métodos <span>html(valor) y text(valor)</span>, el segundo como habíamos visto agrega texto a un elemento HTML.
-
-        </p>
-
-        <button id="btn-1" class="btn btn-primary">Add form</button>
-        <button id="btn-2" class="btn btn-primary">Get form</button>
-
-        <hr>
-
-        <h2>Ejercicio 2:</h2>
-
-        <p><span>Ejericicio: </span>Confeccionar una página que tenga dos botones. El primero debe mostrar en un alert el contenido HTML de la cabecera de la página y el segundo el contenido HTML del cuerpo de la página.</p>
-
-        <button class="btn btn-primary" id="boton-1">Mostrar cabecera</button>
-        <button class="btn btn-primary" id="boton-2">Mostrar cuerpo</button>
     </div>
+
     <script src="./js/09.metodos_html.js" type="text/javascript"></script>
 </body>
 </html>

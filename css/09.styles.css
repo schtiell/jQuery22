@@ -1,50 +1,12 @@
-.container{
-    display: block;
-    text-align: center;
-    background-color: #FAFAFA;
-    color: #212F3D;
-    font-size: 16px;
-    padding: 20px 30px;
-}
-
-small{
-    display: block;
-    color: #8C9193;
-}
-
-hr{
-    margin: 40px;
-}
-
-h1,
-h2{
-    margin: 30px auto;
-    text-align: center;
-    font-weight: bold;
-}
-
-span{
-    font-weight: bold;
-}
-
-p{
-    margin: 20px;
-    text-align: justify;
-}
-
 .btn{
     display: inline-block;
-    margin: 40px 30px;
+    margin: 20px 30px;
 }
 
 label{
-    display: inline-block;
-    text-align: left;
-    margin: 20px auto;
+    font-weight: bold;
 }
 
 input{
-    display: block;
-    max-width: 50%;
-    margin: 5px auto;
+    width: 60%;
 }
