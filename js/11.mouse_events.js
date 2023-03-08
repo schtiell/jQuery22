@@ -5,11 +5,21 @@ $(function(){
 
     //Funciones
     let mouseEntra = function () {
-        $(this).css('color', '#f00')
+        $(this).css({
+            color: '#2980B9 ',
+            fontSize: '20px',
+            fontWeight: 'bold',
+            background: '#E8F6F3'
+        });
     }
 
     let mouseSale = function () {
-        $(this).css('color', '#0000EE');
+        $(this).css({
+                color: '',
+                fontSize: '',
+                fontWeight: '',
+                background: ''
+        });
     }
 
     //Referencias de los links
@@ -23,10 +33,10 @@ $(function(){
     let table = $('#table td');
 
     table.mouseover(function () { 
-        $(this).css('background','#D6EAF8');
+        $(this).css('background','#FAD7A0');
     });
 
-    table.mouseleave(function () { 
+    table.mouseleave( function () {
         $(this).css('background', '#F8F9F9');
     });
 });
