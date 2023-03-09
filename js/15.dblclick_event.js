@@ -1,8 +1,9 @@
 
 //jQuery
 $(function () {
-    
-    console.info('Manejo del evento doble click con jQuery');
+    /**
+     *  Ejercicio 1:
+     */
 
     //Funcion para ocultar el elemento
     let ocultarInfo = function () {
@@ -24,8 +25,9 @@ $(function () {
     let contenedor = $ ('#recuadro');
     contenedor.dblclick(ocultarInfo);
 
-    // =========================== Ejercicio 2
-
+    /**
+     *  Ejercicio 2:
+     */
 
     //Funcion para redimencionar el contenedor aplicando una clase de css
     let redimensionarContenedor = function () {
@@ -42,6 +44,7 @@ $(function () {
     let restaurarContenedor = function (){
         let contenedor = $('#recuadro-2');
         contenedor.removeClass('recuadro-3');
+        contenedor.text('Haz doble click para redimensinar');
     }
 
     //Referencia del elemento html que escucha el evento doble click
