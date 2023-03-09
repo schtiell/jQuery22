@@ -16,3 +16,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 10. jQuery: Manejo de eventos del DOM.
 11. jQuery: Eventos del mouse: mouseover & mouseout.
 12. jQuery: Evento hover.
+13. jQuery: Evento mousemove, mouseleave & mouseenter, para obtener las coordenadas del puntero del mouse.

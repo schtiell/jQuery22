@@ -1,52 +1,18 @@
-.container{
-    display: block;
-    text-align: center;
-    background-color: #FAFAFA;
-    color: #212F3D;
-    font-size: 16px;
-    padding: 20px 30px;
-}
-
-small{
-    display: block;
-    color: #8C9193;
-}
-
-hr{
-    margin: 40px;
-}
-
-h1,
-h2{
-    margin: 30px auto;
-    text-align: center;
-    font-weight: bold;
-}
-
-p{
-    margin: 20px;
-    text-align: justify;
-}
-
-a{
-    display: block;
-    margin: 10px auto;
-    text-align: left;
-    width: 200px;
-}
-
-.table{
-    width: 60%;
-    margin: 30px auto;
-}
-
-table th{
-    text-align: center;
-}
-
-#ejercicio{
+#ejercicio,
+.ejercicio1{
     width: 200px;
     height: 200px;
-    border: 1px solid #000;
+
     margin: 40px auto;
+    padding: 20px 10px;
+
+    border: 1px solid #CCD1D1;
+    border-radius: 10px;
+}
+
+#mensaje{
+    display: block;
+
+    margin-top: 20px;
+    text-align: center;
 }

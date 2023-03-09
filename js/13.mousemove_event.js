@@ -1,37 +1,54 @@
 
 //jQuery
 $(function () {
-    console.log('mousemove event');
 
-    let moverMouse = function (e) {
-        let x = $('#cor-x');
-        x.text(` - Coordenada X= ${e.clientX}`);
+    /**
+     * 
+     * Ejercicio 1:
+     */
 
-        let y = $('#cor-y');
-        y.text(`- Coordenada Y= ${e.clientY}`);
+    let obtenerCoordenadas = function (e) {
+        
+        console.log(e);
+        
+        let coordenada_x = $('#coordenada-x');
+        coordenada_x.text(` - Coordenada X= ${e.clientX}`);
+        coordenada_x.css({
+            fontWeight: 'bold'
+        });
+
+        let coordenada_y = $('#coordenada-y');
+        coordenada_y.text(`- Coordenada Y= ${e.clientY}`);
+        coordenada_y.css({
+            fontWeight: 'bold'
+        });
     }
 
     let documento = $(document);
-    documento.mousemove(moverMouse);
+    documento.mousemove(obtenerCoordenadas);
 
-    //================== Ejercicio 2
+
+    /**
+     * 
+     * Ejercicio 2:
+     */
 
     let moverPuntero = function (e) {
-        let x = $('#x');
-        let y = $('#y');
+        let coord_x = $('#div-cx');
+        let coord_y = $('#div-cy');
 
-        x.text(`= x: ${e.clientX}`);
-        y.text(`= x: ${e.clientY}`);
+        coord_x.text(`= x: ${e.clientX}`);
+        coord_y.text(`= y: ${e.clientY}`);
     }
 
     let mouseFuera = function () {
-        let msj = $('#msj');
-        msj.text('Mouse fuera del contenedor');
+        let mensaje = $('#mensaje');
+        mensaje.text('Mouse fuera del contenedor');
     }
 
     let mouseEntra = function () {
-        let msj = $('#msj');
-        msj.text('');
+        let mensaje = $('#mensaje');
+        mensaje.text('');
     }
 
     let contenedor= $('#ejercicio');
