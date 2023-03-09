@@ -15,3 +15,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 9. jQuery: Método html(html code) para insertar bloques de código html al DOM o bien obtener bloques de código html de los elementos seleccionados.
 10. jQuery: Manejo de eventos del DOM.
 11. jQuery: Eventos del mouse: mouseover & mouseout.
+12. jQuery: Evento hover.

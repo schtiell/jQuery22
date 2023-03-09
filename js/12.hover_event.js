@@ -3,19 +3,25 @@
 
 $(function () {
     
-    console.log('Evento hover con jQuery');
 
     let mouseEntra = function () {
-        $(this).css('background', '#A3E4D7')
+        $(this).css({
+            background: '#A3E4D7',
+            fontSize: '16px',
+            fontWeight: 'bold',
+        });
     }
 
     let mouseSale = function () {
-        $(this).css('background', '#F8F9F9')
+        $(this).css({
+            background: '',
+            fontSize: '',
+            fontWeight: '',
+        });
     }
 
-    let links = $('a');
-    
     //El evento hover recibe como parametros 2 funciones, el comportaminto cuando el mouse entra y otra cuando el mouse sale
+    let links = $('a');
     links.hover(mouseEntra, mouseSale);
 
 

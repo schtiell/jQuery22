@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- jQuery library -->
-    <script src="./js/jquery-3.6.0.min.js" type="text/Javascript"></script>
+    <!-- cdn jquery for bootstrap framework-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-    <!-- boostrap 4 framework -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Importando el CDN "Content Delivery Network" de bootstrap 4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <!-- css3 styles -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+	<!-- css3 for bootstrap  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!-- cdn bundle bootstrap include Popper  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <!-- Importando el css3 -->
+    <link rel="stylesheet" href="./css/00.default.css" type="text/css">
     <link rel="stylesheet" href="./css/12.styles.css">
 
     <!-- favicon -->
@@ -20,6 +32,7 @@
 </head>
 <body>
     <div class="container">
+
         <h1>
             jQuery:
             <small>Manejo del evento hover</small>
@@ -29,52 +42,64 @@
 
         <p>jQuery no solo mapea los eventos del DOM sino que provee otros que combinan estos.</p>
 
-        <p>Como decíamos es habitual utilizar los eventos mouseover y mouseout en común, por eso en jQuery existe un evento llamado hover que tiene dos parámetros:</p>
+        <p>Es habitual utilizar los eventos mouseover y mouseout en común, por eso en jQuery existe un evento llamado hover que tiene dos parámetros:</p>
 
-        <p>
-            <pre>$(elemento).hover([función de ingreso del mouse],[función de salida del mouse])</pre>
-        </p>
+        <p><span>Sintaxis:</span></p>
 
-        <p>Es decir que al evento hover asociamos dos funciones, la primera se ejecuta cuando ingresamos la flecha del mouse dentro del elemento y la segunda cuando retiramos la flecha del mouse.</p>
+        <pre>
+            $(elemento).hover([función de ingreso del mouse],[función de salida del mouse])
+        </pre>
 
-        <p>Confeccionaremos el mismo problema del concepto que vimos los eventos mouseover y mouseout.</p>
+        <p>Es decir que al evento hover se asocian dos funciones, la primera se ejecuta cuando se ingresa la flecha del mouse dentro del elemento y la segunda cuando retiramos la flecha del mouse.</p>
 
-        <hr>
+        <div class="container ejercicio">
 
-        <h2>Ejercicio: 1</h2>
+            <h2>Ejercicio:</h2>
 
-        <p>Implementar una página que contenga tres hipervínculos, cuando ingrese la flecha del mouse al hipervínculo cambiaremos el color de fondo, retornando el color original cuando retiramos la flecha del elemento.</p>
+            <hr>
 
-        <a href="https://youtube.com">Youtube</a>
-        <a href="https://facebook.com">Facebook</a>
-        <a href="https://google.com">Google</a>
+            <div class="row">
 
-        <hr>
+                <div class="col-sm-7">
+                    <p><span>Ejercicio:</span> Implementar tres hipervínculos, cuando ingrese la flecha del mouse al hipervínculo se cambiará el color de fondo, retornando el color original cuando retiramos la flecha del elemento.</p>
+                </div>
 
-        <h2>Ejercicio 2:</h2>
+                <div class="col-sm-5">
+                    <span>Lista de enlaces: </span>
+                    <a href="https://youtube.com">Youtube</a>
+                    <a href="https://facebook.com">Facebook</a>
+                    <a href="https://google.com">Google</a>
+                </div>
+            </div>
 
-        <p><span>Ejercicio: </span>Crear una tabla con dos filas y dos columnas, cambiar el color del interior de la casilla cuando ingresamos con el mouse y dejarla con dicho color cuando retiramos la flecha.</p>
+            <div class="row">
 
-        <table class="table table-light" id="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Joaquin Sayago</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Lourdes Sayago</td>
-                </tr>
-            </tbody>
-        </table>
+                <div class="col-sm-7">
+                    <p><span>Ejercicio:</span> Crear una tabla con dos filas y dos columnas, cambiar el color del interior de la casilla cuando ingresamos con el mouse y dejarla con dicho color cuando retiramos la flecha.</p>
+                </div>
 
-
+                <div class="col-sm-5">
+                    <table class="table table-striped" id="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>id</th>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>45211</td>
+                                <td>Joaquin Sayago</td>
+                            </tr>
+                            <tr>
+                                <td>45632</td>
+                                <td>Lourdes Sayago</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./js/12.hover_event.js" type="text/Javascript"></script>
 </body>
