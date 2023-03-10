@@ -1,7 +1,6 @@
 
-//jQuert ready short declaration
+//jQuery
 $(function () {
-
 
     //Eliminar los elementos de la lista
     let eliminarLista = function (){
@@ -13,11 +12,13 @@ $(function () {
     let restaurarLista = function (){
         let lista = $('.lista');
         lista.html(
-            `<li>Primero</li>
+            `
+            <li>Primero</li>
             <li>Segundo</li>
             <li>Tercero</li>
-            <li>Cuarto</li>`
-        )
+            <li>Cuarto</li>
+            `
+        );
 
         agregarClase();
     }
@@ -66,7 +67,7 @@ $(function () {
     let eliminarPrimerElemento = function () {
         
         let items = $('.lista li');
-        items = items.eq(0);
+        items = items.eq(0); // El metodo eq() devuelve el elemento con indice especifico
         items.remove();
     }
 

@@ -1,50 +1,19 @@
-.container{
-    display: block;
-    text-align: center;
-    background-color: #FAFAFA;
-    color: #212F3D;
-    font-size: 16px;
-    padding: 20px 30px;
-}
-
-small{
-    display: block;
-    color: #8C9193;
-}
-
-hr{
-    margin: 40px;
-}
-
-h1,
-h2{
-    margin: 30px auto;
-    text-align: center;
-    font-weight: bold;
-}
-
-span{
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-p{
-    margin: 20px;
-    text-align: justify;
-}
 
 .list-group{
-  display: block;
-  width: 25%;
-  margin: 30px auto;  
+    display: block;
+    width: 50%;
+    margin: 30px auto;  
 }
 
-li{
-    text-align: left;
-    list-style:circle;
+li:hover{
+    background:#E9F6FF;
 }
 
 .btn{
     display: block;
     margin: 20px;
+}
+
+.btn:hover{
+    width: 200px;
 }
