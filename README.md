@@ -22,3 +22,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 16. jQuery: Evento focas, para disparar eventos sobre elementos al tomar el foco.
 17. jQuery: Evento blur, para disparar eventos sobre elemento al perder el foco.
 18. jQuery: Manejo de elementos del DOM.
+19. jQuery: Manejo de efectos show() y hide() para mostrar y ocultar elementos.

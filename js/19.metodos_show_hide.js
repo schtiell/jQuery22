@@ -1,8 +1,10 @@
 
 //jQuery shot method
 $(function () {
-    
-    console.log("Metodos show() y hide() de jQuery");
+
+    /**
+     * Ejercicio 1:
+     */
 
     let mostrarElemento = function () {
         let contenedor = $("#ejercicio");
@@ -15,20 +17,25 @@ $(function () {
         contenedor.hide(3000);
     }
 
-    let boton1 = $("#boton-1");
+    let boton1 = $("#boton1");
     boton1.click(mostrarElemento);
 
-    let boton2 = $("#boton-2");
+    let boton2 = $("#boton2");
     boton2.click(ocultarElemento);
 
-    //============ Ejercicio 2
+    /**
+     * Ejercicio 2:
+     */
 
     let container = $('#ejercicio-2');
-    container.click( function (){
-        $(this).hide("slow", "linear", () => alert('Hola'));
+    container.click( function () {
+        $(this).hide("slow", function () {
+            alert('Se ocultó el párrafo, haz clic en aceptar');
+        });
 
         setTimeout(function () {
-            container.show();
+            container.text("El texto se modificó porque ya fue ocultado");
+            container.show("slow");
         }, 3000);
     });
 });
