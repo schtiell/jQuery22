@@ -2,28 +2,31 @@
 //jQuery
 
 $(function () {
+
+    /**
+     *  Ejercicio 1:
+     */
     
     //Funcion para cambiar el valor del atributo valor
     let enfocarElemento = function () {
         let buscar = $('#buscar');
-        buscar.attr('value', '')
+        buscar.attr('value', '');
     }
 
     //Referencia del elemento html
     let buscar = $('#buscar');
     buscar.focus(enfocarElemento);
 
-
-    // ===================== Ejericicio 2
+    /**
+     * Ejercicio 2:
+     */
 
     let enfocarNombre = function () {
         let nombre = $('#nombre');
         nombre.attr('value','Agregar nombre...');
-
     }
 
     let enfocarApellido = function () {
-        
         let apellido = $('#apellido');
         apellido.attr('value','Agregar apellido...');
     }
@@ -34,5 +37,4 @@ $(function () {
 
     let apellido = $('#apellido');
     apellido.focus(enfocarApellido);
-
 });

@@ -5,34 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- bundle for bootstrap 4.6.1 por separado-->
+    <!-- cdn jquery for bootstrap framework-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-    <!-- css for bootstrap 4.6.1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- Importando el CDN "Content Delivery Network" de bootstrap 4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <!-- jquery for bootstrap 4.6.1-->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    
-    <!-- popper.js for bootstrap 4.6.1-->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    
-    <!-- bootstrap 4.6.1 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
-    <!-- css3 styles -->
-    <link rel="stylesheet" href="./css/16.styles.css">
-    
+	<!-- css3 for bootstrap  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<!-- cdn bundle bootstrap include Popper  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
     <!-- favicon -->
     <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
 
-    <title>Evento focus con jQuery</title>
+    <!-- Importando el css3 -->
+    <link rel="stylesheet" href="./css/00.default.css" type="text/css">
+    <link rel="stylesheet" href="./css/16.styles.css">
+
+    <title>jQuery: Evento focus</title>
 </head>
 <body>
-
-    <div class="container p-3 my-3 bg-primary text-white">
-        <h1>Primer ejemplo con boostrap 4</h1>
-        <p>Este contenedor tiene un color de fondo azul y un texto blanco, y algunos márgenes y relleno adicionales.</p>
-    </div>
 
     <div class="container">
         
@@ -43,36 +39,59 @@
 
         <hr>
 
-        <p>El evento focus se produce cuando se activa el control. Podemos capturar el evento focus de un control de tipo text, textarea, button, checkbox, fileupload, password, radio, reset y submit.</p>
+        <p><span>El evento focus </span> se produce cuando se activa el control. Podemos capturar el evento focus de un control de tipo text, textarea, button, checkbox, fileupload, password, radio, reset y submit.</p>
 
-        <p>Es común a muchos sitio donde se puede buscar información, disponer un control de tipo text con la leyenda 'Buscar...' y sin ningún botón a su lado. Cuando el control toma foco se borra automáticamente su contenido, el operador ingresa el texto a buscar y presiona la tecla ENTER. Para probar como capturar este evento implementaremos una página que resuelva el problema anteriormente planteado.</p>
+        <p><span>Sintaxis:</span></p>
 
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="buscar">Realiza tu búsqueda: </label>
-                <input type="text" name="buscar" id="buscar" class="form-control" value="Buscar..." size="20" />
-            </div>
-        </form>
+        <pre>
+            $(selector).focus(function (){
+                body function;
+                ...;
+            });
+        </pre>
 
-        <hr>
+        <div class="container ejercicio">
 
-        <h2>Ejercicio 2</h2>
+            <h2>Ejercicio</h2>
 
-        <p>Disponer dos controles de tipo text con algún contenido. Fijar de color azul su fuente. Al tomar foco el control cambiar a color rojo.</p>
+            <hr>
 
-        <form action="#" method="post">
+            <p>Es común a muchos sitio donde se puede buscar información, disponer un control de tipo text con la leyenda 'Buscar...' y sin ningún botón a su lado. Cuando el control toma foco se borra automáticamente su contenido, el operador ingresa el texto a buscar y presiona la tecla ENTER. Para probar como capturar este evento se implementará una página que resuelva el problema anteriormente planteado.</p>
+
+            <form action="#" method="post">
+                <div class="form-group row">
+                    <label for="buscar" class="col-form-label col-sm-6" >Realizar búsqueda:</label>
+    
+                    <div class="col-sm-6">
+                        <input type="text" id="buscar" class="form-control" value="Buscar...."/>
+                    </div>
+                </div>
+            </form>
+
+            <p><span>Ejercicio:</span> Disponer dos controles de tipo text con algún contenido. Fijar de color azul su fuente. Al tomar foco el control cambiar a color rojo.</p>
+
+            <form action="#" method="post">
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-6">Nombre:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="nombre" id="nombre" class="form-control" value="" />
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    <label for="apellido" class="col-form-label col-sm-6">Realiza tu búsqueda:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="apellido" id="apellido" class="form-control" value="Apellido...">
+                    </div>
+                </div>
+            </form>
+    
+
+        </div>
+
+
         
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" class="form-control" value="" size="20" />
-            </div>
 
-            <div class="form-group">
-                <label for="apellido">Realiza tu búsqueda: </label>
-                <input type="text" name="apellido" id="apellido" class="form-control" value="Apellido..." size="20" />
-            </div>
-            
-        </form>
 
     </div>
     <script src="./js/16.event_focus.js" type="text/Javascript"></script>

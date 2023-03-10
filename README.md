@@ -19,3 +19,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 13. jQuery: Evento mousemove, mouseleave & mouseenter, para obtener las coordenadas del puntero del mouse.
 14. jQuery: Evento mousedown & mouseup, para ejecutar los eventos al hacer y solar el click del mouse.
 15. jQuery: Evento dblClick, para disparar eventos al hacer doble clic sobre elementos del DOM.
+16. jQuery: Evento focas, para disparar eventos sobre elementos al tomar el foco.
