@@ -1,35 +1,33 @@
 
 //jQuery short method
 $(function () {
-    console.info('Manejo de evento blur con jquery');
 
-    //Funciones
+    /**
+     * Ejercicio 1:
+     */
+
     let tomarFoco = function () {
         let texto = $(this);
-        texto.css('color', '#f00');
+        texto.css('color', '#E74C3C');
     }
 
     let perderFoco = function (){
         let texto = $(this);
-        texto.css('color', '#00f');
+        texto.css('color', '#2874A6');
     }
 
+    let name = $('#name');
+    let lastname = $('#lastname');
 
-    //Referencias html
-    let text1 = $('#text-1');
+    name.focus(tomarFoco);
+    name.blur(perderFoco);
 
-    //Focus evento cuando el elemento control html toma el foco
-    text1.focus(tomarFoco);
-    text1.blur(perderFoco);
-
-    let text2 = $('#text-2');
-    text2.focus(tomarFoco);
-
-    //Blur evento cuando el elemento control html pierde el foco
-    text2.blur(perderFoco);
-
-
-    // ================ Ejercicio 2
+    lastname.focus(tomarFoco);
+    lastname.blur(perderFoco);
+    
+    /**
+     * Ejercicio 2:
+     */
 
     let obtenerValor = function () {
         //Referencia del elemento que dispara el evento
@@ -40,6 +38,8 @@ $(function () {
 
         if (cadena.length == 0){
             alert('No se insertó ningun valor');
+        }else{
+            alert(`El valor insertado es ${texto.val()}`);
         }
     }
 
