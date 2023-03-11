@@ -38,54 +38,79 @@
 
         <p>Los <span>Métodos fadeIn y fadeOut</span> son similares a show y hide pero con la diferencia que fadeIn hace aparecer los elementos HTML con opacidad. El método fadeOut decolora hasta desaparecer, es decir reduce la opacidad del elemento en forma progresiva.</p>
 
-        <p> <span>Problema:</span> Confeccionar una página que muestre un recuadro con texto. Disponer dos botones, uno que oculte (fadeOut) y el otro que lo muestre (fadeIn).</p>
+        <p><span>Sintaxis:</span></p>
 
-        <p>Las formas de llamar a los métodos fadeIn y fadeOut:</p>
+        <pre>
+            $(selector).fadeIn(speed,funcion (){
+                body function;
+                ...;
+            })
+        </pre>
+
+        <pre>
+            $(selector).fadeOut(speed,funcion (){
+                body function;
+                ...;
+            })
+        </pre>
+
+        <p><span>Ejemplos:</span></p>
 
         <p>Lo muestra con una animación rápida:
-            <pre>fadeIn("fast")</pre>
+            <pre>selector.fadeIn("fast", function(){})</pre>
         </p>
 
         <p>Lo muestra con una animación normal:
-            <pre>fadeIn("normal")</pre>
+            <pre>fadeIn("normal", function(){})</pre>
         </p>
 
         <p>Lo muestra con una animación lenta:
-            <pre>fadeIn("slow")</pre>
-        </p>
-
-        <p>Lo muestra con una animación que tarda tantos milisegundos como le indicamos:
-            <pre>fadeIn([cantidad de milisegundos])</pre>
-        </p>
-
-        <p>Lo muestra con una animación que tarda tantos milisegundos como le indicamos y ejecuta al final la función que le pasamos como segundo parámetro:
-            <pre>fadeIn([cantidad de milisegundos],[función])</pre>
+            <pre>fadeIn("slow", function(){})</pre>
         </p>
 
         <p>De forma similar funciona el método fadeOut.</p>
 
-        <h2>Ejercicio 2</h2>
+        <div class="container ejercicio">
+
+            <h2>Ejercicio:</h2>
 
             <hr>
 
+            <p><span>Problema:</span> Confeccionar una página que muestre un recuadro con texto. Disponer dos botones, uno que oculte (fadeOut) y el otro que lo muestre (fadeIn).</p>
+
             <div class="row" id="ejercicio">
 
-                <div class="col-sm-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate ut ipsam in necessitatibus! Alias animi, quasi voluptatum asperiores, atque reprehenderit assumenda nisi accusantium numquam illo laudantium tempore repellat enim.</p></div>
+                <div class="col-sm-4">
+                    <div class="contenedor">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate ut ipsam in necessitatibus! Alias animi, quasi voluptatum asperiores, atque reprehenderit assumenda nisi accusantium numquam illo laudantium tempore repellat enim.</p>
+                    </div>
+                </div>
 
-                <div class="col-sm-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate ut ipsam in necessitatibus! Alias animi, quasi voluptatum asperiores, atque reprehenderit assumenda nisi accusantium numquam illo laudantium tempore repellat enim.</p></div>
+                <div class="col-sm-4">
+                    <div class="contenedor">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate ut ipsam in necessitatibus! Alias animi, quasi voluptatum asperiores, atque reprehenderit assumenda nisi accusantium numquam illo laudantium tempore repellat enim.</p>
+                    </div>
+                </div>
 
-                <div class="col-sm-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate ut ipsam in necessitatibus! Alias animi, quasi voluptatum asperiores, atque reprehenderit assumenda nisi accusantium numquam illo laudantium tempore repellat enim.</p></div>
+                <div class="col-sm-4">
+                    <div class="contenedor">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptate ut ipsam in necessitatibus! Alias animi, quasi voluptatum asperiores, atque reprehenderit assumenda nisi accusantium numquam illo laudantium tempore repellat enim.</p>
+                    </div>
+                </div>
             </div>
 
             <button id="boton-1" class="btn btn-primary">Mostra</button>
             <button id="boton-2" class="btn btn-primary">Ocultar</button>
 
+            <h2>Ejercicio 2</h2>
+
+            <hr>
+
             <div id="ejercicio2">
                 <p>Confeccionar una página que contenga un div con un conjunto de párrafos. Cuando se presione con el mouse dentro del div ocultarlo por decoloración y cuando esté completamente oculto hacer que aparezca lentamente otro bloque.</p>
             </div>
-
-  
+        </div>
     </div>
-    <script src="./js/20.metodos_fadein_fadeout.js"></script>
+<script src="./js/20.metodos_fadein_fadeout.js"></script>
 </body>
 </html>

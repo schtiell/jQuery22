@@ -2,8 +2,9 @@
 //jQuery metodo corto
 $(function () {
     
-    console.log('Metodos fadeout & fadein');
-
+    /**
+     * Ejercicio 1:
+     */
     let ocultarElemento = function() {
         let contenedor = $('#ejercicio');
         contenedor.fadeOut("slow");
@@ -20,15 +21,22 @@ $(function () {
     let boton2 = $('#boton-2');
     boton2.click(ocultarElemento);
 
-    // Ejercicio 2
+    /**
+     * Ejercicio 2:
+     */
 
     let mostrarContenedor = function () {
         contenedor.fadeIn("fast");
     }
 
     let ocultarContenedor = function () {
-        $(this).fadeOut("slow");
-        mostrarContenedor();
+        let contenedor = $(this);
+        contenedor.fadeOut("slow", function (){
+            setTimeout(function (){
+                mostrarContenedor();
+                contenedor.text("El texto fue cambiado despues de desaparecer el contenedor");
+            }, 3000);
+        });
     }
 
     let contenedor = $('#ejercicio2');

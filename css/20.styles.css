@@ -1,4 +1,19 @@
+.contenedor{
+    width: 95%;
+    border: 1px solid #BB8FCE;
+    border-radius: 10px;
+    background: #F5EEF8;
+}
+
 .btn{
     display: inline-block;
-    margin: 20px;
+    margin: 40px 40px;
+}
+
+#ejercicio2{
+
+    border: 2px solid #2E86C1;
+    border-radius: 10px;
+
+    background: #EBF5FB;
 }
