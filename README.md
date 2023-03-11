@@ -24,3 +24,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 18. jQuery: Manejo de elementos del DOM.
 19. jQuery: Manejo de efectos show() y hide() para mostrar y ocultar elementos.
 20. jQuery: Manejo de los efectos fadeIn() y fadeOut() para mostrar y desvanecer elementos.
+21. jQuery: Manejo del efecto fadeTo() para controlar la opacidad de los elementos.
