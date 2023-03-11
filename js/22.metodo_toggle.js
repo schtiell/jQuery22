@@ -1,15 +1,12 @@
 
 //jQuery short method
 $(function () {
-    
-    console.log('Metodo toogle con jQuery');
 
     let mostrarOcultarElemento = function () {
-        let contenedor = $('#contenedor');
-        contenedor.toggle("slow");
+        let contenedor = $('.bloques');
+        contenedor.toggle(4000);    // Tiempo en milisegundos
     }
 
     let boton = $('#boton');
     boton.click(mostrarOcultarElemento);
-
 });

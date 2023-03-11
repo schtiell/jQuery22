@@ -25,3 +25,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 19. jQuery: Manejo de efectos show() y hide() para mostrar y ocultar elementos.
 20. jQuery: Manejo de los efectos fadeIn() y fadeOut() para mostrar y desvanecer elementos.
 21. jQuery: Manejo del efecto fadeTo() para controlar la opacidad de los elementos.
+22. jQuery: Manejo del metodo toggle para cambiar la visibilidad de un elemento de visible a oculto y viceversa.
