@@ -7,10 +7,18 @@ $(function () {
      */
 
     let resaltarParrafos = function () {
+        
         let parrafos = $(this);
-        if (parrafos.text().length < 10) {
-            let contenedor = $('.parrafo');
-            contenedor.css('background', ' #e8daef');
+
+        if(parrafos.text().length <= 100){
+            console.log(parrafos.text());
+            parrafos.css({
+                'background-color': '#D5F5E3',
+                'border-width': '2px',
+                'border-style': 'solid',
+                'border-color': '#82E0AA',
+                'border-radius': '10px'
+            });
         }
     }
 
@@ -25,22 +33,18 @@ $(function () {
     //Funcion realizarBusqueda()
     let realizarBusqueda = function () {
 
-        //Almanacenando el listado en una variable links
         let links = $(this);
-
-        //Almacenando el valor del atributo href de cada link en una variable atributo
         let atributo = links.attr('href');
 
-        //Si el valor del atributo tiene una cadena .ar entonces le cambiar el color de fondo
+        //Método indexOf busca una cadena, si retorna -1 el string no fue encontrado.
         if(atributo.indexOf('.ar') != -1){
-            links.css('background-color', '#FFCDD2');
+            links.css({
+                'background': '#D2B4DE',
+                'font-weight': 'bold',
+            });
         }
-        
     }
 
-    //listado de enlaces dentro del elemento div con id lista-links
     let lista_enlaces = $('#lista-links a');
-
-    //recorrer cada uno de los elemento seleccionados y instanciando a la funcion realizarBusqueda() a ellos
     lista_enlaces.each(realizarBusqueda);
 });
