@@ -5,69 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- css for bootstrap 4 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- css3 for bootstrap  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <!-- jQuery 3.6 for bootstrap 4 -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    
-    <!-- bundle bootstrap 4, includes bootstrap.bundle.js, bootstrap.bundle.min.js, poper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    
-    <!-- css3 styles -->
-    <link rel="stylesheet" href="./css/23.styles.css" type="text/css">
-    
+    <!-- cdn jquery for bootstrap framework-->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <!-- cdn bundle bootstrap include Popper  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Importando el CDN "Content Delivery Network" de bootstrap 4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
     <!-- favicon -->
     <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
 
-    <title>Iterando elementos jQuery</title>
+    <!-- Importando el css3 -->
+    <link rel="stylesheet" href="./css/00.default.css" type="text/css">
+    <link rel="stylesheet" href="./css/23.styles.css" type="text/css">
+
+    <title>jQuery: Iterando elementos</title>
 </head>
 <body>
-    <div class="container border">
-        <h1>jQuery:
+    <div class="container">
+        <h1>
+            jQuery:
             <small>Iterando elementos con el método each()</small>
         </h1>
 
         <hr>
 
-        <p>jQuery dispone de un método que nos permite asociar una función que se ejecutará por cada elemento que contenga la lista del objeto jQuery.</p>
+        <p>jQuery dispone de un método que permite asociar una función que se ejecutará por cada elemento que contenga la lista del objeto jQuery.</p>
 
-        <p>Dentro de esta función podemos manipular el elemento actual</p>
+        <p>Dentro de esta función se puede manipular el elemento actual</p>
 
-        <p>La sintaxis del iterador each es:
-            <pre>
-                var x;
-                x=$([elementos]);
-                x.each([nombre de funcion])
-            </pre>
-        </p>
+        <p>Su sintaxis:</p>
 
-        <p><span>Ejercicio: </span>Resaltar con fondo amarillo todos los párrafos que tienen menos de 100 caracteres.</p>
+        <pre>
+            let x;
+            x=$(elementos);
+            x.each( function (){
+                body function;
+                ...;
+            });
+        </pre>
 
-        <div class="container border" id="parrafos">
+        <div class="container ejercicio">
+
+            <h2>Ejercicio</h2>
+
+            <hr>
+
+            <p><span>Ejercicio: </span>Resaltar con fondo amarillo todos los párrafos que tienen menos de 100 caracteres.</p>
 
             <div class="row">
-
-                <div class="col-md-3">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam alias, atque nulla saepe praesentium quaerat tempora error. Voluptatem assumenda magni optio sequi ad, accusamus labore incidunt, suscipit pariatur aliquam quibusdam!</p>
-                </div>
-
-                <div class="col-md-3">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                </div>
-
                 <div class="col-sm-3">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis id in nihil! Minus quo earum, voluptatibus quis praesentium architecto soluta assumenda sed rem, quas hic quibusdam atque odit doloremque?</p>
+                    <div class="parrafo">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam alias, atque nulla saepe praesentium quaerat tempora error. Voluptatem assumenda magni optio sequi ad, accusamus labore incidunt, suscipit pariatur aliquam quibusdam!</p>
+                    </div>
                 </div>
-
                 <div class="col-sm-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti dolor eligendi non.</p>
+                    <div class="parrafo">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="parrafo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis id in nihil! Minus quo earum, voluptatibus quis praesentium architecto soluta assumenda sed rem, quas hic quibusdam atque odit doloremque?</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="parrafo">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti dolor eligendi non.</p>
+                    </div>
                 </div>
             </div>
 
+            <h2>Ejercicio</h2>
+
             <hr>
-            
-            <h2>Ejericicio 2</h2>
 
             <p><span>Ejercicio 2: </span>Una página tiene una lista de hipervínculos. Resaltar todos los subdominios .ar, Utilizar el método indexOf de la clase String para verificar si una cadena se encuentra en otra.</p>
 

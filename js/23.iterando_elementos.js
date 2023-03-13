@@ -2,27 +2,25 @@
 //jQuery metodo corto
 $(function () {
     
-    console.log('Iterando elementos con el metodo each()');
+    /**
+     *  Ejercicio 1:
+     */
 
-    //Funcion resaltar parrafos
     let resaltarParrafos = function () {
-
-        //Lista de parrafos declarada en una variable parrafos
         let parrafos = $(this);
-
-        //Si la longitud del texto por cada elemento de la lista es menor a 100 caracteres se cambia el color de fondo
-        if (parrafos.text().length < 100) {
-            parrafos.css('background-color', '#FFAB91')
+        if (parrafos.text().length < 10) {
+            let contenedor = $('.parrafo');
+            contenedor.css('background', ' #e8daef');
         }
     }
-    //Se obtiene la lista de parrafos contendidas en el div con id parrafos
-    let parrafos = $('#parrafos p');
 
-    //El metodo each llama a la funcion resaltarParrafos()
+    let parrafos = $('.parrafo p');
     parrafos.each(resaltarParrafos);
 
 
-    // Ejericico 2
+    /**
+     * Ejercicio 2:
+     */
 
     //Funcion realizarBusqueda()
     let realizarBusqueda = function () {
