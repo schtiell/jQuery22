@@ -28,3 +28,5 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 22. jQuery: Manejo del metodo toggle para cambiar la visibilidad de un elemento de visible a oculto y viceversa.
 23. jQuery: Iterando objetos con el método each().
 24. jQuery: Objeto load() ajax.
+25. jQuery: Método ajaxStart() para iniciar una petición al servidor http.
+25. jQuery: Método ajaxStop() para ejecutar una función una vez que se han terminado las peticiones http.
