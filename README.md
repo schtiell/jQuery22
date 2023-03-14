@@ -27,3 +27,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 21. jQuery: Manejo del efecto fadeTo() para controlar la opacidad de los elementos.
 22. jQuery: Manejo del metodo toggle para cambiar la visibilidad de un elemento de visible a oculto y viceversa.
 23. jQuery: Iterando objetos con el método each().
+24. jQuery: Objeto load() ajax.
