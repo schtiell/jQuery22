@@ -51,13 +51,20 @@
             $(selector).load([nombre de la página],[datos],[funcion()])
         </pre>
 
-
         <p>Donde: </p>
 
         <ul>
-            <li>El parámetro de URL requerido especifica la URL que desea cargar.</li>
-            <li>El parámetro de data "opcional" especifica un conjunto de pares clave/valor de cadena de consulta para enviar junto con la solicitud.</li>
-            <li>El parámetro callback opcional es el nombre de una función que se ejecutará después de que load()se complete el método.</li>
+            <li><span>El parámetro de URL:</span> requerido especifica la URL que desea cargar.</li>
+            <li><span>El parámetro de data:</span> "opcional" especifica un conjunto de pares clave/valor de cadena de consulta para enviar junto con la solicitud.</li>
+            <li><span>El parámetro callback:</span> opcional es el nombre de una función que se ejecutará después de que load()se complete el método.</li>
+        </ul>
+
+        <p>El parámetro callback opcional especifica una función de devolución de llamada que se ejecutará cuando load()se complete el método. La función callback puede tener diferentes parámetros:</p>
+
+        <ul>
+            <li><span>responseTxt:</span> contiene el contenido resultante si la llamada tiene exito.</li>
+            <li><span>statusTxt:</span> Contiene el estado de la llamada.</li>
+            <li><span>xhr:</span> contiene el objeto XMLHttpRequest</li>
         </ul>
 
         <div class="container ejercicio">

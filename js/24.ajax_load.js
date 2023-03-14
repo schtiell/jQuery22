@@ -23,8 +23,6 @@ $(function () {
 
     //Referencias de los enlaces contenidos en el div con id menu
     let enlace = $('#menu a');
-
-    //Cuando se hace click sobre el enlace se invoca a la función cargaHoroscopo
     enlace.click(cargarHoroscopo);
 
 
@@ -48,7 +46,6 @@ $(function () {
 
             if(statusTxt == "error")
                 console.log(`Error: ${xhr.status}: ${xhr.statusText}`);
-
         });
         
         return false;

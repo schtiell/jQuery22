@@ -10,31 +10,35 @@
 
 #menu a {
     display: block;
-    padding: 3px;
     width: 160px;
-    background-color: #f7f8e8;
+
+    padding: 3px;
+
+    background: #f7f8e8;
     border-bottom: 1px solid #eee;
+
     text-align:center;
 }
 
 #menu a:link, #menu a:visited {
-    color: #f00;
+    color: #1B4F72;
     text-decoration: none;
 }
 
 #menu a:hover {
-    background-color: #369;
+    background: #1B4F72;
     color: #fff;
 }
 
 #info {
-    background-color: #ffc;
-    text-align: left;
-    font-family: verdana;
-    border-width: 0;
-    padding: 5px;
-    border: 1px solid #fa0;
     margin: 15px 5px;
+    padding: 5px;
+    
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    background: #D4E6F1;
+    border-width: 0;
+    border: 3px solid #2980B9;
 }
 
 .btn{
