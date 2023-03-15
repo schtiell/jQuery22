@@ -1,29 +1,29 @@
 
-
-//jQuery metodo corto
 $(function () {
 
     // Método Get
 
-    // Declaración de la función enviarNumero
     let enviarDatosGet = function () {
 
-        // Referencia del valor capturado en el textbox
+        // Asignación de valores del textbox a variables
         let num = $('#numero').val();
         let nom = $('#nombre').val();
         let correo = $('#email').val();
 
-        // El método get indicando la url del servidor, la información a procesar, el objeto literal con todos los claves y valores  y la funcion anonima o declarada fuera del bloque que procesará la información devuelta al servidor
-        $.get("../php/pagina2.php", 
-                { 
+        // El método get
+        $.get(
+                "../php/pagina2.php", //URL
+                
+                {                         
                     numero  :   num,
-                    nombre  :   nom,
+                    nombre  :   nom,    // Data
                     email   :   correo
                 },
 
                 function (data, textStatus, jqXHR) {
-                    console.log('Data: ' + data + '\nStatus: ' + textStatus);
+                    console.log('Data: ' + data + '\nStatus: ' + textStatus);   //Callback
                     alert(data);
+                    console.log(jqXHR);
                 }
         );
         
@@ -31,8 +31,8 @@ $(function () {
         return false;
     }
 
-    // Referencia del boton el cual espera el evento click para llamar a la funcion enviarNumero
-    let boton = $('#boton');
+    //Referencia del boton
+    let boton = $('#boton-get');
     boton.click(enviarDatosGet);
 
 
@@ -40,25 +40,28 @@ $(function () {
 
     let enviarDatosPost = function () {
         
+        // Asignación de valores del textbox a variables
         let id = $('#id').val();
         let user = $('#username').val();
         let pass = $('#password').val();
 
-        $.post("../php/pagina3.php", {
-            id :    id,
-            username : user,
-            password : pass
-        },
-
-         function (data, textStatus, jqXHR ) {
-             console.log('Data: ' + data + '\nStatus: ' + textStatus);
-             alert(data);
-         });
+        $.post(
+                "../php/pagina3.php",   //URL
+                {
+                    id :    id,
+                    username : user,    // Data
+                    password : pass
+                },
+                function (data, textStatus, jqXHR ) {
+                    console.log('Data: ' + data + '\nStatus: ' + textStatus);   // callback
+                alert(data);
+            }
+        );
 
         return false;
     }
 
-    // Referencia del boton para enviar datos por el emtodo post
+    // Referencia del boton
     let botonPost = $('#boton-post');
     botonPost.click(enviarDatosPost);
 });

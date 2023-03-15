@@ -1,47 +1,13 @@
-.container{
-    display: block;
-    text-align: center;
-    background-color: #FAFAFA;
-    color: #212F3D;
-    font-size: 16px;
-    padding: 20px 30px;
-}
-
-small{
-    display: block;
-    color: #8C9193;
-}
-
-hr{
-    margin: 40px;
-}
-
-h1,
-h2{
-    margin: 30px auto;
-    text-align: center;
-    font-weight: bold;
-}
-
-span{
-    font-weight: bold;
-}
-
-pre{
-    text-align: left;
-    margin: 10px 20px;
-}
-
-p{
-    margin: 20px;
-    text-align: justify;
-}
 
 label,
 .form-control{
     display: block;
     margin: 20px auto;
     width: 200px;
+}
+
+label{
+    font-weight: bold;
 }
 
 .btn{

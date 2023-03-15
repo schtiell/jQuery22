@@ -5,65 +5,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- css for bootstrap 4 -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- css3 for bootstrap  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-     <!-- jQuery 3.6 for bootstrap 4 -->
-     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-     
-     <!-- bundle bootstrap 4, includes bootstrap.bundle.js, bootstrap.bundle.min.js, poper.js -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-     
-     <!-- css3 styles -->
-     <link rel="stylesheet" href="./css/26.styles.css" type="text/css">
-     
-     <!-- favicon -->
-     <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+    <!-- cdn jquery for bootstrap framework-->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
-    <title>Métodos get y post de aJax y jQuery</title>
+    <!-- cdn bundle bootstrap include Popper  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Importando el CDN "Content Delivery Network" de bootstrap 4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ico/jquery-ico.png" type="image/x-icon">
+
+    <!-- Importando el css3 -->
+    <link rel="stylesheet" href="./css/00.default.css" type="text/css">
+    <link rel="stylesheet" href="./css/26.styles.css" type="text/css">
+
+    <title>jQuery: ajax métodos get() & post()</title>
 </head>
 <body>
-    <div class="container border">
+    <div class="container">
         <h1>
             jQuery:
-            <small>Pasando datos al servidor por los métodos GET y POST</small>
+            <small>Ajax: Métodos get( ) & post( )</small>
         </h1>
 
         <hr>
 
-        <p>Utilizamos estas funciones cuando no queremos inyectar directamente los datos a nuestra página, sino que queremos procesarlos y eventualmente agregarlos en distintas partes.</p>
+        <p>Los métodos get( ) y post( ) de jQuery, se utilizan para solicitar datos al servidor mediante peticiones HTTP GET o POST.</p> 
+        
+        <p>El método GET se utiliza básicamente para conseguir (recuperar) algunos datos del servidor, este método puede devolver los datos almacenados en memoria caché</p>
 
-        <p>La sintaxis de la <span>funcion $.get</span> es distinta a la ya utilizada $, en este caso es una función global de la librería jQuery:</p>
+        <p>El método POST también se puede utilizar para obtener algunos datos del servidor, sin embargo, el método POST, nunca almacena datos en caché y con frecuencias es utilizado para enviar datos junto con la solicitud.</p>
 
-    
-        <pre>       $.get(
-            [nombre de la página],
-            [parámetros a enviarse por el método get],
-            [función que recibe los datos del servidor]
-        );
-        </pre>
+        <p><span>Nota: </span>Utilizamos estas funciones cuando no queremos inyectar directamente los datos a nuestra página, sino que queremos procesarlos y eventualmente agregarlos en distintas partes.</p>
 
-        <p>También podemos llamarla:</p>
-
-        <pre>       jQuery.get(
-            [nombre de la página],
-            [parámetros a enviarse por el método get],
-            [función que recibe los datos del servidor]
-        );
-        </pre>
-
-        <p><span>La función $.post</span> es idéntica a la <span>función $.get</span>, lo único que difiere es como el protocolo HTTP empaqueta los datos y los envía al servidor. Normalmente se utiliza la función $.post, ya que no está limitado la cantidad de datos que se pueden enviar al servidor.</p>
-
-        <p><span>Ejercicio: </span>Implementar una aplicación que calcule el cuadrado de un número que ingresamos por teclado. La operación se realiza en el servidor, le enviamos los datos mediante la función de jQuery $.get</p>
+        <h2>
+            Peticiones HTTP:
+            <small>Método get( ) vs post( )</small>
+        </h2>
 
         <hr>
 
+        <p>Como se menciona en parrafos anteriores, estos 2 métodos son utilizados para realizar solicitudes/respuestas entre un cliente y el servidor.</p>
+
+        <ul>
+            <li><span>Método GET: </span>Pide los datos de un recurso especificado. Este método utiliza básicamente para conseguir algunos datos del servidor. El método get puede devolver los datos almacenados en caché</li>
+            <li><span>Método POST: </span>Adjunta los datos para un recurso especifico, este método tambien es utilizado para solicitar datos, sin embargo, el método post no almacena datos en memoria caché, comunmente es utilizado para enviar datos en conjunto con la solicitud.</li>
+        </ul>
+
         <div class="row">
             <div class="col-sm-6">
-                <div class="container border" id="div-form">
+                <p>La <span>funcion $.get</span> es distinta a la ya utilizada <span>$</span>, en este caso es una función global de la librería jQuery:</p>
 
+                <p><span>Su sintaxis:</span></p>
+    
+                <pre>       
+                    $.get(
+                    URL,
+                    data,
+                    callback
+                );
+                </pre>
+
+                <p><span>o bien:</span></p>
+
+                <pre>       
+                    jQuery.get(
+                        URL,
+                        data,
+                        callback
+                    );
+                </pre>
+            </div>
+            <div class="col-sm-6">
+
+                <p><span>La función $.post</span> es idéntica a la función $.get, lo único que difiere es como el protocolo HTTP empaqueta los datos y los envía al servidor. Normalmente se utiliza la función $.post, ya que no está limitado la cantidad de datos que se pueden enviar al servidor.</p>
+
+                <p><span>Su sintaxis:</span></p>
+    
+                <pre>       
+                    $.post(
+                    URL,
+                    data,
+                    callback
+                );
+                </pre>
+
+                <p><span>o bien:</span></p>
+
+                <pre>       
+                    jQuery.post(
+                        URL,
+                        data,
+                        callback
+                    );
+                </pre>
+            </div>
+        </div>
+
+        <div class="container ejercicio">
+
+            <h2>Ejercicio</h2>
+
+            <hr>
+
+            <p><span>Ejercicio: </span>Implementar una aplicación que calcule el cuadrado de un número que ingresamos por teclado. La operación se realiza en el servidor, le enviamos los datos mediante la función de jQuery $.get</p>
+    
+            <div class="row">
+                <div class="col-sm-6 border">
+    
                     <h2>Envío de datos al servidor con el Método $.get</h2>
-
+    
                     <form action="./php/pagina2.php" method="get" id="formulario">
         
                         <div class="form-group">
@@ -80,19 +138,17 @@
                             <label for="email">Ingrese su email: </label>
                             <input type="email" name="email-text" class="form-control" id="email" size="20">
                         </div>
-        
-                        <button class="btn btn-primary" id="boton">Enviar datos</button>
+            
+                        <button class="btn btn-primary" id="boton-get">Enviar datos</button>
                     </form>
                 </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="container border">
-                    
-                    <h2>Envio de datos al servidor con el Método $.post</h2>
-
+    
+                <div class="col-sm-6 border">
+                        
+                    <h2>Envío de datos al servidor con el Método $.post</h2>
+    
                     <form action="./php/pagina3.php" method="post" id="formulario-2">
-        
+            
                         <div class="form-group">
                             <label for="id">Ingrese un id: </label>
                             <input type="number" name="numero-text" class="form-control" id="id" size="4">
