@@ -5,7 +5,7 @@ $(function () {
     
     let num = $("#numero").val();
 
-    console.log(`Ejercicio de ajax el valor del numero ${v}`);
+    console.log(`Ejercicio de ajax el valor del numero: ${num}`);
 
     $.ajax({
       async: true,
@@ -20,7 +20,7 @@ $(function () {
       error: problemas
     });
 
-    return false;
+    return false; //Evitar la propagación del evento click sobre el boton
   }
 
   let inicioEnvio = function () {
@@ -29,13 +29,12 @@ $(function () {
   }
   
   let llegadaDatos = function (datos) {
-    $("#resultados").text(datos);
+    $("#resultados").html(`<span>El cuadrado es: ${datos}</span>`);
   }
   
   let problemas = function () {
-    $("#resultados").text('Problemas en el servidor.');
+    $("#resultados").html('<span>Problemas en el servidor.</span>');
   }
-
 
   let boton = $('#btn-enviar');
   boton.click(solicitarDatos);
