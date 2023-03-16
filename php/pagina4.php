@@ -26,6 +26,11 @@
         $direccion='Laprida 785';
     }
 
-    echo json_encode(['id'=>$id, 'nombre'=>$nombre, 'apellido'=>$apellido, 'direccion'=>$direccion]);
+    echo json_encode([
+                    'id'=>$id, 
+                    'nombre'=>$nombre, 
+                    'apellido'=>$apellido, 
+                    'direccion'=>$direccion
+    ]);
 
 ?>
