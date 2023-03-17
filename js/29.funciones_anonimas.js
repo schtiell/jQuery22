@@ -1,38 +1,52 @@
 
 //jQuery método corto
 $(function () {
-    
-    console.log('Manejo de funciones anónimas con jQuery');
 
-    //Titulo 1
-    let titulo1 = $('#titulo-1');
+    /**
+     * Ejercicio 1
+     */
 
-    //Uso de función anónima al presentarse el evento clic sobre el elemento h1
-    titulo1.click(function (e) { 
+    let titulo1 = $('#titulo1');
+    titulo1.click(function (e) {    //Función anónima ejecutada al disparar el evento clic
         
-        //El objeto this hace referencia al elemento sobre el cual está ejecutandose el evento
-        let titulo = $(this);
-        titulo.css('color', '#ff0000');
-        titulo.css('background-color', '#ffff00');
-        titulo.css('font-family', 'Courier');
+        let titulo = $(this);       //El objeto this hace referencia al elemento que ejecuta el evento
+        titulo.css({
+                    border: '2px solid #1B4F72',
+                    borderRadius: '15px',
+                    padding: '10px',
+                    color: '#3498DB',
+                    background: '#EAF2F8',
+                    fontFamily: 'Courier'
+        });
+        
+        let subtitulo = $('#titulo1 small');
+        subtitulo.text('Estilos css con jQuery');
     });
 
-
-    //Uso de funciones anonimas
-    $('#titulo-2').click(function (e) { 
-
+    $('#titulo2').click(function (e) { 
         let titulo = $(this);
-        titulo.css('color', '#ffff00');
-        titulo.css('background-color', '#ff0000');
-        titulo.css('font-family', 'Arial');
+        titulo.css({
+                    border: '2px solid #566573',
+                    borderRadius: '10px',
+                    padding: '10px 5px',
+                    color: '#ABB2B9',
+                    background: '#EAF2F8',
+                    fontFamily: 'Arial'
+        });
+
+        let subtitulo = $('#titulo2 small');
+        subtitulo.text('Estilos css con jQuery');
     });
 
+    /**
+     * Ejercicio 2:
+     */
 
-    // Ejercicio 2
-
-    $('#user-tables tr').click(function (e) { 
+    $('#users tr').click(function (e) { 
         let fila = $(this);
-        fila.css('background-color', '#D6EAF8');
-        fila.css('color', '#E74C3C ');
+        fila.css({
+                    background: '#FAE5D3',
+                    color: '#34495E'
+        });
     });
 });
