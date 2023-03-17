@@ -1,32 +1,38 @@
 
-//jQuery metodo corto
 $(function () {
-    console.log('Llamadas encadenadas a metodos de jQuery');
+    /**
+     * Ejercicio 1
+     */
 
-    //Boton 1
-    let boton1 = $('#boton-1');
-
-    //Uso de funciones anónimas 
+    let boton1 = $('#boton1');
     boton1.click(function (e) { 
-
-        //Encadenamiento de métodos. 
-        $('#descripcion').fadeTo('slow', 0.5, 'swing').hide('slow');
+        /*
+        *Encadenamiento de métodos.
+        *Primero se ejecuta el metodo fadeTo para difuminar, despues el metodo hide(), para ocultar lentamente
+        */
+        $('#descripcion')
+            .fadeTo('slow', 0.5, 'swing')
+            .hide('slow');
     });
 
-    //Boton 2
-    let boton2 = $('#boton-2');
+    let boton2 = $('#boton2');
     boton2.click(function (e){
 
-        //Es importante notar que los métodos se ejecutan de izquierda a derecha.
-        $('#descripcion').show().fadeTo("slow",1, "linear");
+        /*
+        *Importante los métodos se ejecutan de izquierda a derecha.
+        *Primero se muestra el elemento lentamente metodo show(), despues el metodo fadeTo() restaura el difuminado 
+        */
+        $('#descripcion')
+            .show('slow')
+            .fadeTo("slow",1, "swing");
     });
 
-
-    //Ejercicio 2: Horoscopos
+    /**
+     * Ejercicio 2
+     */
 
     $('#menu a').click(function () {
         $('#detalles').load($(this).attr('href'));
         return false;
     })
-    
 });

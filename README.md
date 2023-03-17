@@ -34,3 +34,4 @@ Una manera diferente de trabajar con javascript del lado del cliente.
 27. jQuery: Método getJSON(), para realizar peticiones HTTP al servidor y recibir respuestas en formato JSON.
 28. jQuery: Método $.ajax(), para realizar peticiones HTTP al servidor de forma asíncrona.
 29. jQuery: Manejo de funciones anónimas.
+30. jQuery: Encadenamiento de métodos.
